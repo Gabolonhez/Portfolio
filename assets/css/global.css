@@ -29,18 +29,17 @@ a:hover {
     border-radius: 1rem;
 }
 
-.main::before,
-.main::after {
+main::before, main::after {
     content: '';
-    background-image: url('../img/background.svg');
+    background: radial-gradient(circle, rgba(8,6,37,1) 0%, rgba(43,43,92,1) 35%, rgba(3,10,11,1) 100%);
     background-repeat: no-repeat;
     background-size: contain;
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 140vw;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -62,6 +61,6 @@ a:hover {
 
     .main::before,
     .main::after {
-        width: 70vw;
+        
     }
 }
