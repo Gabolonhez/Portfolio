@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../img/icons/header.svg');
+    cursor: pointer;
 }
 
 .header .photo {
@@ -31,12 +32,13 @@
     text-shadow: -5px 5px 5px black;
 }
 
+
 .information {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    
+
 }
 
 .information p {
@@ -72,6 +74,37 @@
 .information .phone::before {
     background-image: url('../img/icons/phone.svg');
 }
+
+
+.language-selector {
+    display: none; /* Inicialmente escondido */
+    flex-direction: column; /* Coloca os botões em coluna */
+    position: absolute;
+    top: 4rem; /* Ajuste a posição conforme necessário */
+    right: 1rem;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.language-selector.show {
+    display: flex; /* Mostra os botões quando a classe 'show' é adicionada */
+}
+
+.language-button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.language-button.active {
+    background-color: #ddd;
+}
+
 
 @media only screen and (min-width: 768px) {
     .header {
