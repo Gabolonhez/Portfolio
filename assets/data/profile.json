@@ -1,0 +1,77 @@
+{
+  "name": "Gabriel Bolonhez",
+  "photo": "./assets/data/imgs/Me.png",
+  "job": "Desenvolvimento Front-end e Qualidade de software",
+  "location": "São Bernardo do campo - São Paulo",
+  "phone": "(11) 94367 8485",
+  "email": "gbbolonhez@gmail.com",
+  "skills": {
+    "hardSkills": [
+      {
+        "name": "HTML",
+        "logo": "./assets/data/imgs/html.png"
+      },
+      {
+        "name": "CSS",
+        "logo": "./assets/data/imgs/css.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "./assets/data/imgs/js.png"
+      },
+      {
+        "name": "Git",
+        "logo": "./assets/data/imgs/git.png"
+      },
+      {
+        "name": "Github",
+        "logo": "./assets/data/imgs/github.png"
+      },
+      {
+        "name": "Vscode",
+        "logo": "./assets/data/imgs/vscode.png"
+      }
+    ],
+    "softSkills": [
+      "Liderança",
+      "Comunicação",
+      "Organização",
+      "Proatividade",
+      "Disciplina",
+      "Pensamento Crítico",
+      "Resolução de problemas"
+    ]
+  },
+  "education": [
+    {
+      "name": "Sistemas de Informação",
+      "period": "02/2023 - 12/2026",
+      "description": "Centro Universitário Fundação Santo André (CUFSA)"
+    }
+  ],
+
+  "languages": [
+    "Português (fluente)",
+    "Inglês (avançado)",
+    "Espanhol (intermediário)"
+  ],
+  "portfolio": [
+    {
+      "name": "Acesse meu Github",
+      "url": "https://github.com/Gabolonhez",
+      "github": true
+    }
+  ],
+  "professionalExperience": [
+    {
+      "name": "Estágiario em Service Desk de TI - Tecnocomp ",
+      "period": "12/2023 - 12/2024",
+      "description": "Atuando no atendimento ao usuário e na resolução dos chamados."
+    },
+    {
+      "name": "Estágiario de Sustentação de Sistemas - Intertox ",
+      "period": "12/2024 - Até o momento",
+      "description": "Atuando na qualidade de software."
+    }
+  ]
+}
