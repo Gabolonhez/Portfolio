@@ -1,5 +1,6 @@
 # Portfolio
-![image](https://github.com/user-attachments/assets/ef78322d-e9b3-451c-81a5-62ea477f3706)
+![image](https://github.com/user-attachments/assets/08a62af0-409c-4354-b174-56b56b815989)
+
 
 ## 📑 Descrição
 
