@@ -30,9 +30,15 @@
     <main class="main">
         <header class="header">
             <img src="assets/img/my-photo.png" alt="Foto de perfil" class="photo" id="profile.photo">
+            <div class="header__buttons">
+                <button id="btnPT">PT</button>
+                <button id="btnEN">EN</button>
+            </div>
             <h1 class="title">
                 <span id="profile.name">Carregando...</span>
             </h1>
+            
+        </div>
             <div class="information">
                 <p class="job" id="profile.job">Carregando...</p>
                 <p class="location" id="profile.location">Carregando...</p>
@@ -46,7 +52,7 @@
         </header>
         <section class="acordeon">
             <button class="trigger" type="button">
-                <h2>Skills</h2>
+                <h2 id="skills-title">Habilidades</h2>
             </button>
 
             <div class="content">
@@ -71,7 +77,7 @@
 
         <section class="acordeon">
             <button class="trigger" type="button">
-                <h2>Educação</h2>
+                <h2 id="education-title" >Educação</h2>
             </button>
             <div class="content">
                 <ul class="education" id="profile.education">
@@ -81,7 +87,7 @@
 
         <section class="acordeon">
             <button class="trigger" type="button">
-                <h2>Idiomas</h2>
+                <h2 id="languages-title">Idiomas</h2>
             </button>
 
             <div class="content">
@@ -93,7 +99,7 @@
 
         <section class="acordeon">
             <button class="trigger" type="button">
-                <h2>Portfólio</h2>
+                <h2 id="portfolio-title">Portfólio</h2>
             </button>
 
             <div class="content">
@@ -104,7 +110,7 @@
 
         <section class="acordeon">
             <button class="trigger" type="button">
-                <h2>Experiência Profissional</h2>
+                <h2 id="professionalExperience-title">Experiência Profissional</h2>
             </button>
 
             <div class="content">
@@ -123,6 +129,7 @@
     <script src="assets/js/acordeon.js"></script>
     <script src="assets/js/api.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/changeLanguage.js"> </script>
 </body>
 
 </html>
