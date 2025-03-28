@@ -1,10 +1,17 @@
 {
   "name": "Gabriel Bolonhez",
   "photo": "./assets/data/imgs/Me.png",
-  "job": "Desenvolvimento Front-end e Qualidade de software",
-  "location": "São Bernardo do campo - São Paulo",
-  "phone": "(11) 94367 8485",
+  "job": "Desenvolvimento Front-end | Qualidade de software",
+  "location": "Pauliceia, São Bernardo do Campo, São Paulo, Brasil",
+  "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
+  "accordionTitles": {
+    "skills": "Habilidades",
+    "education": "Formação Acadêmica",
+    "languages": "Idiomas",
+    "portfolio": "Portfólio",
+    "professionalExperience": "Experiência Profissional"
+  },
   "skills": {
     "hardSkills": [
       {
@@ -71,7 +78,7 @@
     {
       "name": "Estágiario de Sustentação de Sistemas - Intertox ",
       "period": "12/2024 - Até o momento",
-      "description": "Atuando na qualidade de software."
+      "description": "Atuando na sustentação do sistema e garantindo a qualidade do software."
     }
   ]
 }

@@ -75,34 +75,8 @@
     background-image: url('../img/icons/phone.svg');
 }
 
-
-.language-selector {
-    display: none; /* Inicialmente escondido */
-    flex-direction: column; /* Coloca os botões em coluna */
-    position: absolute;
-    top: 4rem; /* Ajuste a posição conforme necessário */
-    right: 1rem;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.language-selector.show {
-    display: flex; /* Mostra os botões quando a classe 'show' é adicionada */
-}
-
-.language-button {
-    background-color: #e0e0e0;
-    border: none;
-    padding: 8px 16px;
-    margin: 5px 0;
+.header__buttons button {
     cursor: pointer;
-    border-radius: 4px;
-}
-
-.language-button.active {
-    background-color: #ddd;
 }
 
 

@@ -1,0 +1,84 @@
+
+{
+    "name": "Gabriel Bolonhez",
+    "photo": "./assets/data/imgs/Me.png",
+    "job": "Front-end Development | Software Quality",
+    "location": "Pauliceia, São Bernardo do Campo, São Paulo, Brazil",
+    "phone": "+55 (11) 94367-8485",
+    "email": "gbbolonhez@gmail.com",
+    "accordionTitles": {
+    "skills": "Skills",
+    "education": "Education",
+    "languages": "Languages",
+    "portfolio": "Portfolio",
+    "professionalExperience": "Work Experience"
+  },
+    "skills": {
+      "hardSkills": [
+        {
+          "name": "HTML",
+          "logo": "./assets/data/imgs/html.png"
+        },
+        {
+          "name": "CSS",
+          "logo": "./assets/data/imgs/css.png"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "./assets/data/imgs/js.png"
+        },
+        {
+          "name": "Git",
+          "logo": "./assets/data/imgs/git.png"
+        },
+        {
+          "name": "Github",
+          "logo": "./assets/data/imgs/github.png"
+        },
+        {
+          "name": "Vscode",
+          "logo": "./assets/data/imgs/vscode.png"
+        }
+      ],
+      "softSkills": [
+        "Leadership",
+        "Communication",
+        "Organization",
+        "Proactivity",
+        "Discipline",
+        "Critical Thinking",
+        "Problem Solving"
+      ]
+    },
+    "education": [
+      {
+        "name": "Information Systems",
+        "period": "02/2023 - 12/2026",
+        "description": "Centro Universitário Fundação Santo André (CUFSA)"
+      }
+    ],
+    "languages": [
+      "Portuguese (fluent)",
+      "English (advanced)",
+      "Spanish (intermediate)"
+    ],
+    "portfolio": [
+      {
+        "name": "Access my Github",
+        "url": "https://github.com/Gabolonhez",
+        "github": true
+      }
+    ],
+    "professionalExperience": [
+      {
+        "name": "IT Service Desk Intern - Tecnocomp",
+        "period": "12/2023 - 12/2024",
+        "description": "Providing user support and resolving tickets."
+      },
+      {
+        "name": "Systems Support Intern - Intertox",
+        "period": "12/2024 - Present",
+        "description": "Supporting the system and ensuring software quality."
+      }
+    ]
+  }
