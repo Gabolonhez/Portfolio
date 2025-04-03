@@ -5,6 +5,10 @@
   "location": "Pauliceia, São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
+  "skillsTitles": {
+    "skillsTech": "Tecnologias:",
+    "skillsPersonal": "Pessoal:"
+  },
   "accordionTitles": {
     "skills": "Habilidades",
     "education": "Formação Acadêmica",
@@ -12,7 +16,7 @@
     "portfolio": "Portfólio",
     "professionalExperience": "Experiência Profissional"
   },
-  "skills": {
+  "skills": { 
     "hardSkills": [
       {
         "name": "HTML",

@@ -40,11 +40,17 @@ function updateProfileInfo(profileData) {
 }
 
 function updateSoftSkills(profileData) {
+  const skillsPersonal= document.getElementById('skills-personal');
+  skillsPersonal.innerText = profileData.skillsTitles.skillsPersonal;
+
   const softSkills = document.getElementById('profile.skills.softSkills');
   softSkills.innerHTML = profileData.skills.softSkills.map(skill => `<li>${skill}</li>`).join('');
 }
 
 function updateHardSkills(profileData) {
+  const skillsTech = document.getElementById('skills-tech');
+  skillsTech.innerText = profileData.skillsTitles.skillsTech;
+  
   const hardSkills = document.getElementById('profile.skills.hardSkills');
   hardSkills.innerHTML = profileData.skills.hardSkills.map(skill => `<li><img src="${skill.logo}" alt="${skill.name}" title="${skill.name}"></li>`).join('');
 }
@@ -92,8 +98,6 @@ function updateProfessionalExperience(profileData) {
   }).join('');
 }
 
-
-
 async function loadAndDisplayData(language) {
   const profileData = await fetchProfileData(language);
   updateProfileInfo(profileData);
@@ -106,5 +110,4 @@ async function loadAndDisplayData(language) {
   updateAccordionTitles(profileData);
 }
 
-// Carregar os dados iniciais
 loadAndDisplayData(currentLanguage);
