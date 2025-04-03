@@ -1,12 +1,94 @@
-footer {
-    width: 100%;
+footer .images__links {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
+    gap: 2rem;
 }
 
-footer img {
-    max-width: 100px;
+footer .images__links img {
+    width: 30px;
+    animation: wiggle 3s linear infinite;  
 }
+
+footer .images__links a:hover {
+    transform: scale(1.3);
+    transition: ease 1s;
+}
+
+/* Animations */
+
+@keyframes rotating {
+    0% {
+        transform: rotateY(30deg) rotate(-25deg) translateZ(100px);
+    }
+    25% {
+        transform: rotateY(-30deg) translateZ(100px);
+    }
+    50% {
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    75% {
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    100% {
+        transform: rotateX(20deg) translateZ(0);
+    }
+}
+
+/* animation: example 5s infinite alternate;
+  filter: blur(100px); */
+
+@keyframes wiggle {
+    0%, 10% {
+      transform: rotate(0);
+    }
+    15% {
+      transform: rotate(-15deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    30% {
+      transform: rotate(10deg);
+    }
+    35% {
+      transform: rotate(-10deg);
+    }
+    40%, 100% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% { 
+      background-position: 0% 50%;
+    }
+
+}
+
+/* animation: gradient 5s ease infinite alternate; */
+
+@keyframes loader {
+    to {
+      transform: scale(1.8);
+    }
+  }
+
+    /* animation: loader .8s ease-in-out alternate infinite;
+    animation: loader .8s ease-in-out alternate .3s infinite;
+ 
+    animation: loader .8s ease-in-out alternate .6s infinite; */
+ 
