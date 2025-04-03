@@ -29,7 +29,9 @@
 .header .title {
     font-family: 'Neue Machina';
     text-align: center;
-    text-shadow: -5px 5px 5px black;
+    text-shadow: -5px 5px 5px black;   
+    white-space: nowrap;
+
 }
 
 
@@ -81,6 +83,10 @@
 
 .header__buttons {
     margin-top: 20px;       
+}
+
+.header__buttons button:hover {
+    transform: scale(1.2);
 }
 
 @media only screen and (min-width: 768px) {
