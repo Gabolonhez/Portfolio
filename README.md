@@ -17,5 +17,6 @@ Portfolio responsivo com minhas informações.
 - `HTML`
 - `CSS`
 - `JavaScript`
+- `JSON`
 
 
