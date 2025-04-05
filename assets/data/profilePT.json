@@ -1,8 +1,8 @@
 {
   "name": "Gabriel Bolonhez",
-  "photo": "./assets/data/imgs/Me.png",
+  "photo": "./assets/images/Me.png",
   "job": "Desenvolvimento Front-end | Qualidade de software",
-  "location": "Pauliceia, São Bernardo do Campo, São Paulo, Brasil",
+  "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
   "skillsTitles": {
@@ -13,34 +13,34 @@
     "skills": "Habilidades",
     "education": "Formação Acadêmica",
     "languages": "Idiomas",
-    "portfolio": "Portfólio",
+    "portfolio": "Projetos",
     "professionalExperience": "Experiência Profissional"
   },
   "skills": { 
     "hardSkills": [
       {
         "name": "HTML",
-        "logo": "./assets/data/imgs/html.png"
+        "logo": "./assets/images/html.png"
       },
       {
         "name": "CSS",
-        "logo": "./assets/data/imgs/css.png"
+        "logo": "./assets/images/css.png"
       },
       {
         "name": "JavaScript",
-        "logo": "./assets/data/imgs/js.png"
+        "logo": "./assets/images/js.png"
       },
       {
         "name": "Git",
-        "logo": "./assets/data/imgs/git.png"
+        "logo": "./assets/images/git.png"
       },
       {
         "name": "Github",
-        "logo": "./assets/data/imgs/github.png"
+        "logo": "./assets/images/github.png"
       },
       {
         "name": "Vscode",
-        "logo": "./assets/data/imgs/vscode.png"
+        "logo": "./assets/images/vscode.png"
       }
     ],
     "softSkills": [
