@@ -34,7 +34,6 @@
 
 }
 
-
 .information {
     display: flex;
     flex-direction: column;
@@ -77,16 +76,32 @@
     background-image: url('../img/icons/phone.svg');
 }
 
-.header__buttons button {
-    cursor: pointer;
-}
-
 .header__buttons {
-    margin-top: 20px;       
+    margin-top: 20px;
+    margin-left: 5px;
+    display: flex;  
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
 }
 
 .header__buttons button:hover {
     transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.brazil-icon {
+    width: 35px;
+}
+.usa-icon {
+    width: 45px;
+}
+
+#btnPT, #btnEN {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
