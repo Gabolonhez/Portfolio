@@ -41,6 +41,10 @@
       {
         "name": "Vscode",
         "logo": "./assets/images/vscode.png"
+      },
+      {
+        "name": "SQL",
+        "logo": "./assets/images/sql-server.png"
       }
     ],
     "softSkills": [
