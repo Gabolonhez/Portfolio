@@ -3,7 +3,7 @@
 
 ## 📑 Descrição
 
-Esse é um portfolio que possui informações sobre educação, habilidades (técnicas e pessoais), idiomas, projetos e experiência profissional.
+Portfolio responsivo com minhas informações.
 
 ## 🎯 Funcionalidades
 - [x] : Permite abrir e fechar as seções.
