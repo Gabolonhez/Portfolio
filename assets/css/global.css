@@ -1,11 +1,11 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
 @font-face {
     font-family: 'Neue Machina';
     src: url('../fonts/neue-machina-regular.otf');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -29,9 +29,9 @@ a:hover {
     border-radius: 1rem;
 }
 
+
 main::before, main::after {
     content: '';
-    background: radial-gradient(circle, rgba(8,6,37,1) 0%, rgba(43,43,92,1) 35%, rgba(3,10,11,1) 100%);
     background-repeat: no-repeat;
     background-size: contain;
     width: 140vw;
@@ -41,6 +41,11 @@ main::before, main::after {
     bottom: 0;
     left: 0;
     z-index: -1;
+
+    animation: gradient 10s ease infinite alternate;
+    background: linear-gradient(-45deg, rgba(8,6,37,1) 0%, rgba(43,43,92,1) 35%, rgba(3,10,11,1) 100%);
+    background-size: 400% 400%;
+
 }
 
 .main::after {
@@ -52,15 +57,22 @@ main::before, main::after {
     transform: rotate(180deg);
 }
 
-
 @media only screen and (min-width: 768px) {
     .main {
         max-width: 1024px;
         margin: 1rem auto;
     }
+}
 
-    .main::before,
-    .main::after {
-        
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% { 
+      background-position: 0% 50%;
+    }
+    
 }
