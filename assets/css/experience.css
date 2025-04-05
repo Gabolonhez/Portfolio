@@ -6,6 +6,23 @@
     list-style: none;
 }
 
+.experience h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experience h3::before {
+    content: "";
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/work.png');
+    margin-right: .5rem;
+}
+
 .experience li {
     margin-bottom: 1rem;
 }
@@ -23,6 +40,6 @@
     height: 1rem;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/icons/calendar.svg');
+    background-image: url('../images/icons/calendar.svg');
     margin-right: .5rem;
 }
