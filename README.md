@@ -10,7 +10,7 @@ Esse é um portfolio que possui informações sobre educação, habilidades (té
 - [X] : Permite alterar a linguagem para português ou inglês.
 - [x] : Permite alterar as informações via JSON.
 - [X] : Possui animações no background, links e botões
-- [X] : Permiite baixar o currículo. 
+- [X] : Permiite baixar o currículo em PDF. 
 
 ## 💻 Tecnologias 
 
