@@ -21,4 +21,8 @@ Este é meu portfólio pessoal, onde compartilho sobre mim, habilidades, educaç
 - `JSON`
 - `Git`
 
+## 🌐 Link do projeto
+
+https://gabolonhez.github.io/Portfolio/
+
 
