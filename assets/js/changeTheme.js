@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (savedTheme) {
         setTheme(savedTheme);
+    } else {
+        setTheme("dark");
     }
 
     themeToggle.addEventListener('click', () => {
