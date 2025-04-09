@@ -11,10 +11,10 @@
   },
   "accordionTitles": {
     "skills": "Habilidades",
-    "education": "Formação Acadêmica",
+    "education": "Formação",
     "languages": "Idiomas",
     "portfolio": "Projetos",
-    "professionalExperience": "Experiência Profissional"
+    "professionalExperience": "Experiência"
   },
   "skills": { 
     "hardSkills": [
