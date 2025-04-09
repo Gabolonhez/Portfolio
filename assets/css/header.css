@@ -5,19 +5,6 @@
     position: relative;
 }
 
-.header::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('../images/icons/header.svg');
-    cursor: pointer;
-}
 
 .header .photo {
     width: 200px;
@@ -34,6 +21,7 @@
 
 }
 
+
 .information {
     display: flex;
     flex-direction: column;
@@ -41,6 +29,17 @@
     width: 100%;
 
 }
+
+.change-theme {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.change-theme img {
+   width: 30px;
+   cursor: pointer;
+}
+
 
 .information p {
     display: flex;
@@ -127,5 +126,6 @@
     .header .information {
         grid-area: information;
     }
+    
 }
 

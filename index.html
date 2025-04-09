@@ -25,10 +25,11 @@
 </head>
 
 <body>
-    <main class="main">
-        <header class="header">
+    <div class="change-theme">
+            <img id="theme-toggle" class="theme__image" src="./assets/images/dark-mode.png" alt="Dark and Light mode">
+    </div>
+    <header class="header"> 
             <img src="./assets/images/my-photo.png" alt="Foto de perfil" class="photo" id="profile.photo">
-            
             <div class="header__buttons">
                 <button id="btnPT"><img class="brazil-icon" src="./assets/images/PT.png" alt="Brazil "></button>
                 <button id="btnEN"><img class="usa-icon" src="./assets/images/EN.png" alt="English flag"></button>
@@ -47,6 +48,7 @@
                 </p>
             </div>
         </header>
+        <main class="main">
         <section class="acordeon">
             <button class="trigger" type="button">
                 <h2 id="skills-title">Carregando...</h2>
@@ -131,6 +133,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/changeLanguage.js"></script>
     <script src="assets/js/scripts.js"> </script>
+    <script src="assets/js/changeMode.js"> </script>
 </body>
 
 </html>
