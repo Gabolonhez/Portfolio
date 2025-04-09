@@ -8,10 +8,16 @@
     transition: .25s;
 }
 
-.acordeon.open,
+body.dark-mode .acordeon.open,
 .acordeon:hover {
     background-color: #55569E;
     border-color: #55569E;
+}
+
+body.light-mode .acordeon.open,
+.acordeon:hover {
+    background-color: #c2c3f3;
+    border-color:  #c2c3f3;
 }
 
 .acordeon .trigger {
@@ -23,8 +29,15 @@
     font-weight: 700;
     padding: 1rem 2rem;
     background-color: transparent;
-    color: #fff;
     border: none;
+}
+
+body.dark-mode .acordeon .trigger {
+    color: #fff;
+}
+
+body.light-mode .acordeon .trigger {
+    color: #000000;
 }
 
 .acordeon .trigger h2 {

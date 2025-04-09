@@ -8,21 +8,32 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body {
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode {
     background-color: #000;
     color: #fff;
 }
 
 a {
-    color: #fff;
     text-decoration: none;
 }
+
+body.dark-mode a {
+    color: #fff;
+}
+body.light-mode a {
+    color: black;
+} 
 
 a:hover {
     text-decoration: underline;
 }
 
-.main {
+body {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid #fff;
@@ -30,7 +41,7 @@ a:hover {
 }
 
 
-main::before, main::after {
+body.dark-mode::before {
     content: '';
     background-repeat: no-repeat;
     background-size: contain;
@@ -48,7 +59,26 @@ main::before, main::after {
 
 }
 
-.main::after {
+
+body.light-mode::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 140vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: gradient 10s ease infinite alternate;
+    background:linear-gradient(-45deg, rgb(209, 207, 228) 0%, rgb(78, 78, 109) 35%, rgb(146, 174, 179) 100%);
+    background-size: 400% 400%;
+
+}
+
+.body::after {
     content: '';
     top: auto;
     left: auto;
@@ -57,8 +87,9 @@ main::before, main::after {
     transform: rotate(180deg);
 }
 
+
 @media only screen and (min-width: 768px) {
-    .main {
+    body {
         max-width: 1024px;
         margin: 1rem auto;
     }
