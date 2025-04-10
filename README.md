@@ -4,7 +4,7 @@
 
 ## 📑 Descrição
 
-Este é meu portfólio pessoal, onde compartilho sobre mim, habilidades, educação, experiências e projetos.
+Este é meu portfólio pessoal, onde compartilho sobre mim, habilidades, educação, idiomas, experiências e projetos.
 
 ## 🎯 Funcionalidades
 - [X] : Responsividade.
