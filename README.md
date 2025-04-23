@@ -26,4 +26,4 @@ Este é meu portfólio pessoal responsivo para destkop e mobile, onde compartilh
 
 https://gabolonhez.github.io/Portfolio/
 
-
+## 🛠️ Como abrir e rodar o projeto
