@@ -3,7 +3,7 @@ body.dark-mode .acordeon {
     flex-direction: column;
     width: 100%;
     margin: 1rem 0;
-    border: 1px solid #fff;
+    border: 1px solid var(--white-color);
     border-radius: 1rem;
     transition: .25s;
 }
@@ -13,21 +13,21 @@ body.light-mode .acordeon {
     flex-direction: column;
     width: 100%;
     margin: 1rem 0;
-    border: 1px solid #000000;
+    border: 1px solid var(--black-color);
     border-radius: 1rem;
     transition: .25s;
 }
 
 body.dark-mode .acordeon.open,
 .acordeon:hover {
-    background-color: #55569E;
-    border-color: #55569E;
+    background-color: var(--violet-color);
+    border-color: var(--violet-color);
 }
 
 body.light-mode .acordeon.open,
 .acordeon:hover {
-    background-color: #c2c3f3;
-    border-color:  #c2c3f3;
+    background-color: var(--violet-light-color);
+    border-color:  var(--violet-light-color);
 }
 
 .acordeon .trigger {
@@ -43,11 +43,11 @@ body.light-mode .acordeon.open,
 }
 
 body.dark-mode .acordeon .trigger {
-    color: #fff;
+    color: var(--white-color);
 }
 
 body.light-mode .acordeon .trigger {
-    color: #000000;
+    color: var(--black-color);
 }
 
 .acordeon .trigger h2 {

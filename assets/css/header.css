@@ -10,17 +10,15 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    filter: drop-shadow(15px 15px 15px #000000);
+    filter: drop-shadow(15px 15px 15px var(--black-color));
 }
 
 .header .title {
-    font-family: 'Neue Machina';
+    font-family: var(--secondary-font);
     text-align: center;
-    text-shadow: -5px 5px 5px black;   
+    text-shadow: 5px 0 5px var(--black-color);   
     white-space: nowrap;
-
 }
-
 
 .information {
     display: flex;
