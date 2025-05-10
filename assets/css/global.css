@@ -1,21 +1,26 @@
-@font-face {
-    font-family: 'Neue Machina';
-    src: url('../fonts/neue-machina-regular.otf');
+:root {
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --violet-color:  #55569E;
+    --violet-light-color: #c2c3f3;
+
+    --main-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Neue Machina', sans-serif;
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--main-font);
 }
 
 body.dark-mode {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 body.dark-mode {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 a {
@@ -23,10 +28,10 @@ a {
 }
 
 body.dark-mode a {
-    color: #fff;
+    color: var(--white-color);
 }
 body.light-mode a {
-    color: black;
+    color: var(--black-color);
 } 
 
 a:hover {
@@ -40,11 +45,11 @@ body {
 }
 
 body.dark-mode {
-    border: 1px solid #fff;
+    border: 1px solid var(--white-color);
 }
 
 body.light-mode {
-    border: 1px solid #000;
+    border: 1px solid var(--black-color);
 }
 
 
