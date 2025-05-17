@@ -46,6 +46,10 @@
         {
           "name": "SQL",
           "logo": "./assets/images/sql-server.png"
+        },
+        {
+          "name": "React",
+          "logo": "./assets/images/react.png"
         }
       ],
       "softSkills": [
