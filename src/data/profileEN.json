@@ -1,7 +1,7 @@
 
 {
     "name": "Gabriel Bolonhez",
-    "photo": "./assets/images/Me.png",
+    "photo": "./src/images/Me.png",
     "job": "Front-end Development | QA",
     "location": "São Bernardo do Campo, São Paulo, Brazil",
     "phone": "+55 (11) 94367-8485",
@@ -21,35 +21,35 @@
       "hardSkills": [
         {
           "name": "HTML",
-          "logo": "./assets/images/html.png"
+          "logo": "./src/images/html.png"
         },
         {
           "name": "CSS",
-          "logo": "./assets/images/css.png"
+          "logo": "./src/images/css.png"
         },
         {
           "name": "JavaScript",
-          "logo": "./assets/images/js.png"
+          "logo": "./src/images/js.png"
         },
         {
           "name": "Git",
-          "logo": "./assets/images/git.png"
+          "logo": "./src/images/git.png"
         },
         {
           "name": "Github",
-          "logo": "./assets/images/github.png"
+          "logo": "./src/images/github.png"
         },
         {
           "name": "Vscode",
-          "logo": "./assets/images/vscode.png"
+          "logo": "./src/images/vscode.png"
         },
         {
           "name": "SQL",
-          "logo": "./assets/images/sql-server.png"
+          "logo": "./src/images/sql-server.png"
         },
         {
           "name": "React",
-          "logo": "./assets/images/react.png"
+          "logo": "./src/images/react.png"
         }
       ],
       "softSkills": [
@@ -88,7 +88,7 @@
         "description": "Providing user support and resolving tickets."
       },
       {
-        "name": "Systems Support Intern - Intertox",
+        "name": "Software Quality and Support Intern - Intertox",
         "period": "12/2024 - Present",
         "description": "Supporting the system and ensuring software quality."
       }
