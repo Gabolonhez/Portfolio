@@ -1,0 +1,70 @@
+{
+  "name": "Gabriel Bolonhez - Portfolio",
+  "short_name": "GB Portfolio",
+  "description": "Portfólio profissional de Gabriel Bolonhez, desenvolvedor front-end e especialista em QA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e2e",
+  "theme_color": "#55569E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./src/images/Me.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./src/images/Me.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "portfolio", "developer"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "./src/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Portfolio Mobile View"
+    },
+    {
+      "src": "./src/images/screenshot-desktop.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Portfolio Desktop View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Entre em contato comigo",
+      "url": "/#contact-title",
+      "icons": [
+        {
+          "src": "./src/images/icons/email.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Projetos",
+      "short_name": "Projetos",
+      "description": "Veja meus projetos",
+      "url": "/#portfolio-title",
+      "icons": [
+        {
+          "src": "./src/images/icons/github.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

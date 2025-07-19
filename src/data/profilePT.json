@@ -1,7 +1,7 @@
 {
   "name": "Gabriel Bolonhez",
   "photo": "./src/images/Me.png",
-  "job": "Desenvolvimento Front-end | QA",
+  "job": "Desenvolvedor Front-end | QA",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
@@ -14,41 +14,56 @@
     "education": "Formação",
     "languages": "Idiomas",
     "portfolio": "Projetos",
-    "professionalExperience": "Experiência"
+    "professionalExperience": "Experiência",
+    "contact": "Contato"
+  },
+  "contactLabels": {
+    "email": "Email",
+    "phone": "Telefone",
+    "location": "Localização",
+    "connectText": "Conecte-se comigo:"
   },
   "skills": { 
     "hardSkills": [
       {
         "name": "HTML",
-        "logo": "./src/images/html.png"
+        "logo": "./src/images/html.png",
+        "level": 80
       },
       {
         "name": "CSS",
-        "logo": "./src/images/css.png"
+        "logo": "./src/images/css.png",
+        "level": 90
       },
       {
         "name": "JavaScript",
-        "logo": "./src/images/js.png"
+        "logo": "./src/images/js.png",
+        "level": 85
       },
       {
         "name": "Git",
-        "logo": "./src/images/git.png"
+        "logo": "./src/images/git.png",
+        "level": 80
       },
       {
         "name": "Github",
-        "logo": "./src/images/github.png"
+        "logo": "./src/images/github.png",
+        "level": 85
       },
       {
         "name": "Vscode",
-        "logo": "./src/images/vscode.png"
+        "logo": "./src/images/vscode.png",
+        "level": 90
       },
       {
         "name": "SQL",
-        "logo": "./src/images/sql-server.png"
+        "logo": "./src/images/sql-server.png",
+        "level": 75
       },
       {
         "name": "React",
-        "logo": "./src/images/react.png"
+        "logo": "./src/images/react.png",
+        "level": 80
       }
     ],
     "softSkills": [

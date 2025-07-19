@@ -5,8 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Bolonhez</title>
+    <meta name="description" content="Gabriel Bolonhez - Desenvolvedor Front-end e QA. Especialista em HTML, CSS, JavaScript, React e testes de qualidade de software.">
+    <meta name="keywords" content="Gabriel Bolonhez, desenvolvedor front-end, QA, JavaScript, React, HTML, CSS, São Bernardo do Campo">
+    <meta name="author" content="Gabriel Bolonhez">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gabolonhez.github.io/Portfolio/">
+    <meta property="og:title" content="Gabriel Bolonhez - Desenvolvedor Front-end & QA">
+    <meta property="og:description" content="Portfólio profissional de Gabriel Bolonhez, desenvolvedor front-end e especialista em QA">
+    <meta property="og:image" content="./src/images/Me.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gabolonhez.github.io/Portfolio/">
+    <meta property="twitter:title" content="Gabriel Bolonhez - Desenvolvedor Front-end & QA">
+    <meta property="twitter:description" content="Portfólio profissional de Gabriel Bolonhez, desenvolvedor front-end e especialista em QA">
+    <meta property="twitter:image" content="./src/images/Me.png">
+    
+    <title>Gabriel Bolonhez - Desenvolvedor Front-end & QA</title>
     <link rel="shortcut icon" type="imagex/png" href="./src/images/Me.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#55569E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GB Portfolio">
+    <link rel="apple-touch-icon" href="./src/images/Me.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,9 +47,11 @@
     <link rel="stylesheet" href="src/css/skills.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="src/css/education.css">
+    <link rel="stylesheet" href="src/css/contact.css">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
     <div class="change-theme">
             <img id="theme-toggle" class="theme__image" src="./src/images/dark-mode.png" alt="Dark and Light mode">
     </div>
@@ -48,7 +75,7 @@
                 </p>
             </div>
         </header>
-        <main class="main">
+        <main class="main" id="main-content">
         <section class="acordeon">
             <button class="trigger" type="button">
                 <h2 id="skills-title">Carregando...</h2>
@@ -117,11 +144,54 @@
                 </ul>
             </div>
         </section>
+
+        <section class="acordeon">
+            <button class="trigger" type="button">
+                <h2 id="contact-title">Carregando...</h2>
+            </button>
+
+            <div class="content">
+                <div class="contact-content">
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4 id="contact-email-label">Carregando...</h4>
+                            <a href="mailto:gbbolonhez@gmail.com" id="profile.email-contact">Carregando...</a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <h4 id="contact-phone-label">Carregando...</h4>
+                            <a href="tel:+5511943678485" id="profile.phone-contact">Carregando...</a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <h4 id="contact-location-label">Carregando...</h4>
+                            <span id="profile.location-contact">Carregando...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <p id="contact-connect-text">Carregando...</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/gabolonhez/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <img src="./src/images/LinkedIn.png" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="https://github.com/Gabolonhez" target="_blank" rel="noopener" aria-label="GitHub">
+                                <img src="./src/images/icons/github.svg" alt="GitHub" class="social-icon">
+                            </a>
+                            <a href="https://www.instagram.com/gabolonhez/" target="_blank" rel="noopener" aria-label="Instagram">
+                                <img src="./src/images/Instagram.png" alt="Instagram" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <div class="images__links">
-                <a href="https://www.linkedin.com/in/gabolonhez/" class="link-linkedin" target="_blank"><img src="./src/images/LinkedIn.png" class="linkedin-image" alt="linkedin image"></a>
-                <a href="https://www.instagram.com/gabolonhez/#" class="link-instagram" target="_blank"><img src="./src/images/Instagram.png" class="instagram-image" alt="instagram image"></a>
-                <a href="https://github.com/Gabolonhez" class="link-github" target="_blank"> <img src="./src/images/icons/github.svg" class="github-image" alt="link github" alt="github image"></a>
+                <a href="https://www.linkedin.com/in/gabolonhez/" class="link-linkedin" target="_blank" rel="noopener"><img src="./src/images/LinkedIn.png" class="linkedin-image" alt="linkedin image"></a>
+                <a href="https://www.instagram.com/gabolonhez/#" class="link-instagram" target="_blank" rel="noopener"><img src="./src/images/Instagram.png" class="instagram-image" alt="instagram image"></a>
+                <a href="https://github.com/Gabolonhez" class="link-github" target="_blank" rel="noopener"> <img src="./src/images/icons/github.svg" class="github-image" alt="github image"></a>
             </div>
             <div class="download-cv">
                 <a id="cv" href="./src/files/GabrielBolonhez_Currículo .pdf" download="GabrielBolonhez_CV.pdf"><img src="./src/images/file.png" alt="file image" ></a>
@@ -134,6 +204,7 @@
     <script src="src/js/changeLanguage.js"></script>
     <script src="src/js/scripts.js"> </script>
     <script src="src/js/changeTheme.js"> </script>
+    <script src="src/js/enhancements.js"> </script>
 </body>
 
 </html>
