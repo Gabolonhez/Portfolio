@@ -112,6 +112,11 @@ body.light-mode .acordeon .trigger {
 .acordeon .trigger:hover {
     cursor: pointer;
 }
+.acordeon .trigger:focus,
+.acordeon .trigger:active {
+    outline: none;
+    box-shadow: none;
+}
 
 .acordeon .trigger::after {
     content: '';
