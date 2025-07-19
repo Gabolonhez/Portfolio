@@ -1,6 +1,6 @@
 {
   "name": "Gabriel Bolonhez",
-  "photo": "./assets/images/Me.png",
+  "photo": "./src/images/Me.png",
   "job": "Desenvolvimento Front-end | QA",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
@@ -20,35 +20,35 @@
     "hardSkills": [
       {
         "name": "HTML",
-        "logo": "./assets/images/html.png"
+        "logo": "./src/images/html.png"
       },
       {
         "name": "CSS",
-        "logo": "./assets/images/css.png"
+        "logo": "./src/images/css.png"
       },
       {
         "name": "JavaScript",
-        "logo": "./assets/images/js.png"
+        "logo": "./src/images/js.png"
       },
       {
         "name": "Git",
-        "logo": "./assets/images/git.png"
+        "logo": "./src/images/git.png"
       },
       {
         "name": "Github",
-        "logo": "./assets/images/github.png"
+        "logo": "./src/images/github.png"
       },
       {
         "name": "Vscode",
-        "logo": "./assets/images/vscode.png"
+        "logo": "./src/images/vscode.png"
       },
       {
         "name": "SQL",
-        "logo": "./assets/images/sql-server.png"
+        "logo": "./src/images/sql-server.png"
       },
       {
         "name": "React",
-        "logo": "./assets/images/react.png"
+        "logo": "./src/images/react.png"
       }
     ],
     "softSkills": [
@@ -85,12 +85,12 @@
     {
       "name": "Estágiario em Service Desk de TI - Tecnocomp ",
       "period": "12/2023 - 12/2024",
-      "description": "Atuando no atendimento ao usuário e na resolução dos chamados."
+      "description": "Atuando no suporte técnico e resolução de problemas de TI, garantindo a continuidade dos serviços e a satisfação dos usuários."
     },
     {
-      "name": "Estágiario de Sustentação de Sistemas - Intertox ",
+      "name": "Estágiario de Sustentação e Qualidade de Software - Intertox ",
       "period": "12/2024 - Até o momento",
-      "description": "Atuando na sustentação do sistema e garantindo a qualidade do software."
+      "description": "Atuando na sustentação do sistema e garantindo a qualidade do software"
     }
   ]
 }
