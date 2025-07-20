@@ -1,6 +1,8 @@
 .need-website {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 1rem 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -11,6 +13,8 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 body.light-mode .need-website {
@@ -32,22 +36,30 @@ body.light-mode .need-website {
 }
 
 .need-website .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem 2rem;
     background: var(--violet-color);
-    color: white;
+    color: white !important;
     border-radius: var(--border-radius);
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: bold;
     transition: var(--transition);
     margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    pointer-events: all;
+    user-select: none;
+    min-width: 200px;
 }
 
 .need-website .cta-button:hover {
     background: var(--violet-light-color);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(85, 86, 158, 0.4);
-    text-decoration: none;
+    color: var(--black-color) !important;
 }
 
 @media (max-width: 768px) {
