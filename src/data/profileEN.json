@@ -24,6 +24,11 @@
     "location": "Location",
     "connectText": "Connect with me:"
   },
+  "needWebsite": {
+    "title": "Need a Website?",
+    "description": "Development of professional, modern websites that convert visitors into customers, customized to your business.",
+    "buttonText": "Find out more about our service"
+  },
     "skills": {
       "hardSkills": [
         {

@@ -1,0 +1,69 @@
+.need-website {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    text-align: center;
+}
+
+body.light-mode .need-website {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: var(--shadow);
+}
+
+.need-website h2 {
+    color: var(--violet-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.need-website p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.need-website .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--violet-color);
+    color: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.need-website .cta-button:hover {
+    background: var(--violet-light-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(85, 86, 158, 0.4);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .need-website {
+        padding: 1.5rem;
+    }
+
+    .need-website h2 {
+        font-size: 1.5rem;
+    }
+
+    .need-website p {
+        font-size: 1rem;
+    }
+
+    .need-website .cta-button {
+        padding: 0.8rem 1.5rem;
+    }
+}

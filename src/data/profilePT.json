@@ -23,6 +23,11 @@
     "location": "Localização",
     "connectText": "Conecte-se comigo:"
   },
+  "needWebsite": {
+    "title": "Precisa de um site?",
+    "description": "Desenvolvimento de websites profissionais e modernos que convertem visitantes em clientes, personalizados de acordo com o seu negócio.",
+    "buttonText": "Conheça o nosso serviço"
+  },
   "skills": { 
     "hardSkills": [
       {

@@ -185,6 +185,22 @@ function updateProfileInfo(profileData) {
     email.setAttribute("title", emailTitle);
     email.setAttribute("aria-label", emailTitle);
   }
+
+  // Update Need Website section
+  const websiteTitle = document.getElementById("website-title");
+  if (websiteTitle) {
+    websiteTitle.innerText = profileData.needWebsite.title;
+  }
+
+  const websiteDescription = document.getElementById("website-description");
+  if (websiteDescription) {
+    websiteDescription.innerText = profileData.needWebsite.description;
+  }
+
+  const websiteButton = document.getElementById("website-button");
+  if (websiteButton) {
+    websiteButton.innerText = profileData.needWebsite.buttonText;
+  }
 }
 
 function updateSoftSkills(profileData) {
