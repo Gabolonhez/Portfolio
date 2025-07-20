@@ -319,6 +319,9 @@ async function loadAndDisplayData(language) {
       "contact-phone-label",
       "contact-location-label",
       "contact-connect-text",
+      "website-title",
+      "website-description",
+      "website-button",
     ];
 
     loadingElements.forEach((id) => {
@@ -340,6 +343,22 @@ async function loadAndDisplayData(language) {
     updateProfessionalExperience(profileData);
     updateContactSection(profileData);
     updateAccordionTitles(profileData);
+
+    // Update Need Website section
+    const websiteTitle = document.getElementById("website-title");
+    if (websiteTitle) {
+      websiteTitle.innerText = profileData.needWebsite.title;
+    }
+
+    const websiteDescription = document.getElementById("website-description");
+    if (websiteDescription) {
+      websiteDescription.innerText = profileData.needWebsite.description;
+    }
+
+    const websiteButton = document.getElementById("website-button");
+    if (websiteButton) {
+      websiteButton.innerText = profileData.needWebsite.buttonText;
+    }
 
     console.log("✅ Dados carregados com sucesso");
   } catch (error) {
