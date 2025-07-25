@@ -69,6 +69,11 @@
         "name": "React",
         "logo": "./src/images/react.png",
         "level": 80
+      },
+      {
+          "name": "Typescript",
+          "logo": "./src/images/typescript.png",
+          "level": 80
       }
     ],
     "softSkills": [
@@ -96,9 +101,19 @@
   ],
   "portfolio": [
     {
-      "name": "Acesse meu Github e confira meus repositórios:",
-      "url": "https://github.com/Gabolonhez",
-      "github": true
+        "name": "Gerador de curriculo ATS:",
+        "url": "https://gerador-curriculos.vercel.app/",
+        "github": true
+    },
+    {
+        "name": "Aplicativo de controle financeiro:",
+        "url": "https://granapp.vercel.app/",
+        "github": false
+    },
+    {
+        "name": "Sistema de treinos e dietas:",
+        "url": "https://treinohub.vercel.app/",
+        "github": false
     }
   ],
   "professionalExperience": [
