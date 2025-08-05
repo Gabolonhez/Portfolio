@@ -2,7 +2,7 @@
 {
     "name": "Gabriel Bolonhez",
     "photo": "./src/images/Me.png",
-    "job": "Front-end Developer | QA",
+    "job": "Front-end Developer | Fullstack",
     "location": "São Bernardo do Campo, São Paulo, Brazil",
     "phone": "+55 (11) 94367-8485",
     "email": "gbbolonhez@gmail.com",
@@ -78,13 +78,13 @@
         }
       ],
       "softSkills": [
-        "Leadership",
         "Communication",
         "Organization",
         "Proactivity",
         "Discipline",
         "Critical Thinking",
-        "Problem Solving"
+        "Problem Solving",
+        "Analytical Ability"
       ]
     },
     "education": [
@@ -120,12 +120,12 @@
       {
         "name": "IT Service Desk Intern - Tecnocomp",
         "period": "12/2023 - 12/2024",
-        "description": "Providing user support and resolving tickets."
+        "description": "Working in technical support, user service and problem solving in different systems, ensuring continuity of services and user satisfaction."
       },
       {
-        "name": "Software Quality and Support Intern - Intertox",
+        "name": "Software Quality and Support - Intertox",
         "period": "12/2024 - Present",
-        "description": "Supporting the system and ensuring software quality."
+        "description": "Working at all stages of the agile development lifecycle (Scrum), I am responsible for manual testing, requirements gathering and business analysis, using tools such as Azure DevOps, SQL and APIs to maintain and increase the quality of the system."
       }
     ]
   }
