@@ -1,7 +1,7 @@
 {
   "name": "Gabriel Bolonhez",
   "photo": "./src/images/Me.png",
-  "job": "Desenvolvedor Front-end | QA",
+  "job": "Desenvolvedor Front-end | Fullstack",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
@@ -77,13 +77,12 @@
       }
     ],
     "softSkills": [
-      "Liderança",
       "Comunicação",
       "Organização",
       "Proatividade",
       "Disciplina",
       "Pensamento Crítico",
-      "Resolução de problemas"
+      "Capacidade analítica"
     ]
   },
   "education": [
@@ -120,12 +119,12 @@
     {
       "name": "Estágiario em Service Desk de TI - Tecnocomp ",
       "period": "12/2023 - 12/2024",
-      "description": "Atuando no suporte técnico e resolução de problemas de TI, garantindo a continuidade dos serviços e a satisfação dos usuários."
+      "description": "Atuando no suporte técnico, atendimento ao usuário e na resolução de problemas em diferentes sistemas, garantindo a continuidade dos serviços e a satisfação dos usuários."
     },
     {
-      "name": "Estágiario de Sustentação e Qualidade de Software - Intertox ",
+      "name": "Sustentação e Qualidade de Software - Intertox ",
       "period": "12/2024 - Até o momento",
-      "description": "Atuando na sustentação do sistema e garantindo a qualidade do software"
+      "description": "Atuando em todas as etapas do ciclo de vida do desenvolvimento ágil (Scrum), sou responsável por testes manuais, levantamento de requisitos e análise de negócio, utilizando ferramentas como Azure DevOps, SQL e APIs para manter e elevar a qualidade do sistema."
     }
   ]
 }
