@@ -2,7 +2,7 @@
 {
     "name": "Gabriel Bolonhez",
     "photo": "./src/images/Me.png",
-    "job": "Front-end Developer | Fullstack",
+    "job": "Fullstack developer",
     "location": "São Bernardo do Campo, São Paulo, Brazil",
     "phone": "+55 (11) 94367-8485",
     "email": "gbbolonhez@gmail.com",
@@ -75,6 +75,14 @@
           "name": "Typescript",
           "logo": "./src/images/typescript.png",
           "level": 80
+        },
+        {
+          "name": "Node.js",
+          "logo": "./src/images/nodejs.png"
+        },
+        {
+          "name": "C#",
+          "logo": "./src/images/icons/csharp.png"
         }
       ],
       "softSkills": [
@@ -118,14 +126,19 @@
     ],
     "professionalExperience": [
       {
-        "name": "IT Service Desk Intern - Tecnocomp",
-        "period": "12/2023 - 12/2024",
-        "description": "Working in technical support, user service and problem solving in different systems, ensuring continuity of services and user satisfaction."
+        "name": "Fullstack developer - Intertox",
+        "period": "08/2025 - Current",
+        "description": "Front-end and back-end development using C# (.NET), Angular, JavaScript, HTML, CSS and SQL."
       },
       {
         "name": "Software Quality and Support - Intertox",
-        "period": "12/2024 - Present",
+        "period": "12/2024 - 08/2025",
         "description": "Working at all stages of the agile development lifecycle (Scrum), I am responsible for manual testing, requirements gathering and business analysis, using tools such as Azure DevOps, SQL and APIs to maintain and increase the quality of the system."
+      },
+      {
+        "name": "IT Service Desk - Tecnocomp",
+        "period": "12/2023 - 12/2024",
+        "description": "Working in technical support, user service and problem solving in different systems, ensuring continuity of services and user satisfaction."
       }
     ]
   }
