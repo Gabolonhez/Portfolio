@@ -1,7 +1,7 @@
 {
   "name": "Gabriel Bolonhez",
   "photo": "./src/images/Me.png",
-  "job": "Desenvolvedor Front-end | Fullstack",
+  "job": "Desenvolvedor Fullstack",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
@@ -32,48 +32,47 @@
     "hardSkills": [
       {
         "name": "HTML",
-        "logo": "./src/images/html.png",
-        "level": 80
+        "logo": "./src/images/html.png"
       },
       {
         "name": "CSS",
-        "logo": "./src/images/css.png",
-        "level": 90
+        "logo": "./src/images/css.png"
       },
       {
         "name": "JavaScript",
-        "logo": "./src/images/js.png",
-        "level": 85
+        "logo": "./src/images/js.png"
       },
       {
         "name": "Git",
-        "logo": "./src/images/git.png",
-        "level": 80
+        "logo": "./src/images/git.png"
       },
       {
         "name": "Github",
-        "logo": "./src/images/github.png",
-        "level": 85
+        "logo": "./src/images/github.png"
       },
       {
         "name": "Vscode",
-        "logo": "./src/images/vscode.png",
-        "level": 90
+        "logo": "./src/images/vscode.png"
       },
       {
         "name": "SQL",
-        "logo": "./src/images/sql-server.png",
-        "level": 75
+        "logo": "./src/images/sql-server.png"
       },
       {
         "name": "React",
-        "logo": "./src/images/react.png",
-        "level": 80
+        "logo": "./src/images/react.png"
       },
       {
           "name": "Typescript",
-          "logo": "./src/images/typescript.png",
-          "level": 80
+          "logo": "./src/images/typescript.png"
+      },
+       {
+          "name": "Node.js",
+          "logo": "./src/images/nodejs.png"
+      },
+       {
+          "name": "C#",
+          "logo": "./src/images/icons/csharp.png"
       }
     ],
     "softSkills": [
@@ -117,14 +116,19 @@
   ],
   "professionalExperience": [
     {
-      "name": "Estágiario em Service Desk de TI - Tecnocomp ",
-      "period": "12/2023 - 12/2024",
-      "description": "Atuando no suporte técnico, atendimento ao usuário e na resolução de problemas em diferentes sistemas, garantindo a continuidade dos serviços e a satisfação dos usuários."
+      "name": "Desenvolvedor Fullstack - Intertox",
+      "period": "08/2025 - Atual",
+      "description": "Front-end e back-end utilizando C# (.NET), Angular, JavaScript, HTML, CSS and SQL."
     },
     {
       "name": "Sustentação e Qualidade de Software - Intertox ",
-      "period": "12/2024 - Até o momento",
+      "period": "12/2024 - 08/2025",
       "description": "Atuando em todas as etapas do ciclo de vida do desenvolvimento ágil (Scrum), sou responsável por testes manuais, levantamento de requisitos e análise de negócio, utilizando ferramentas como Azure DevOps, SQL e APIs para manter e elevar a qualidade do sistema."
+    },
+    {
+      "name": "Service Desk de TI - Tecnocomp ",
+      "period": "12/2023 - 12/2024",
+      "description": "Atuando no suporte técnico, atendimento ao usuário e na resolução de problemas em diferentes sistemas, garantindo a continuidade dos serviços e a satisfação dos usuários."
     }
   ]
 }
