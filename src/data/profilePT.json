@@ -106,19 +106,14 @@
     {
         "name": "Aplicativo de controle financeiro:",
         "url": "https://granapp.vercel.app/",
-        "github": false
-    },
-    {
-        "name": "Sistema de treinos e dietas:",
-        "url": "https://treinohub.vercel.app/",
-        "github": false
+        "github": true
     }
   ],
   "professionalExperience": [
     {
       "name": "Desenvolvedor Fullstack - Intertox",
       "period": "08/2025 - Atual",
-      "description": "Front-end e back-end utilizando C# (.NET), Angular, JavaScript, HTML, CSS and SQL."
+      "description": "Atuando na sustentação e melhoria de um software web. Front-end: Angular, JavaScript, HTML, CSS. Back-end: C# .NET, SQL."
     },
     {
       "name": "Sustentação e Qualidade de Software - Intertox ",
