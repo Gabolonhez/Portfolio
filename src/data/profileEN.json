@@ -64,32 +64,32 @@
         {
           "name": "JavaScript",
           "logo": "./src/images/js.png",
-          "level": "advanced"
+          "level": "intermediate"
         },
         {
           "name": "TypeScript",
           "logo": "./src/images/typescript.png",
-          "level": "intermediate"
+          "level": "basic"
         },
         {
           "name": "React",
           "logo": "./src/images/react.png",
-          "level": "intermediate"
+          "level": "basic"
         },
         {
           "name": "Angular",
           "logo": "./src/images/icons/angular.png",
-          "level": "intermediate"
+          "level": "basic"
         },
         {
           "name": "Node.js",
           "logo": "./src/images/nodejs.png",
-          "level": "intermediate"
+          "level": "basic"
         },
         {
           "name": "C#",
           "logo": "./src/images/icons/csharp.png",
-          "level": "intermediate"
+          "level": "basic"
         },
         {
           "name": "SQL",
@@ -104,12 +104,7 @@
         {
           "name": "Github",
           "logo": "./src/images/github.png",
-          "level": "advanced"
-        },
-        {
-          "name": "VS Code",
-          "logo": "./src/images/vscode.png",
-          "level": "advanced"
+          "level": "intermediate"
         }
       ],
       "softSkills": [
