@@ -4,62 +4,132 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 1rem 0;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(37, 99, 235, 0.5);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(37, 99, 235, 0.3));
+    padding: 3rem 2rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(37, 99, 235, 0.15) inset;
+}
+
+.need-website::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.need-website:hover::before {
+    opacity: 1;
+}
+
+body.light-mode .need-website {
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(37, 99, 235, 0.08));
+    box-shadow: 
+        0 8px 32px rgba(37, 99, 235, 0.15),
+        0 0 0 1px rgba(37, 99, 235, 0.1) inset;
+}
+
+.need-website:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 12px 40px rgba(37, 99, 235, 0.35),
+        0 0 30px rgba(37, 99, 235, 0.2),
+        0 0 0 1px rgba(96, 165, 250, 0.4) inset;
+    border-color: rgba(96, 165, 250, 0.6);
+}
+
+.need-website h2 {
+    color: var(--blue-secondary);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
 }
 
-body.light-mode .need-website {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: var(--shadow);
-}
-
-.need-website h2 {
-    color: var(--violet-color);
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+body.light-mode .need-website h2 {
+    color: var(--blue-primary);
 }
 
 .need-website p {
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 .need-website .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    background: var(--violet-color);
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--blue-secondary), #60a5fa);
     color: white !important;
-    border-radius: var(--border-radius);
+    border-radius: 14px;
     text-decoration: none !important;
-    font-weight: bold;
-    transition: var(--transition);
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
     margin-top: 1rem;
     cursor: pointer;
     position: relative;
-    z-index: 2;
-    pointer-events: all;
-    user-select: none;
-    min-width: 200px;
+    z-index: 10;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 
+        0 4px 20px rgba(37, 99, 235, 0.4),
+        0 0 20px rgba(37, 99, 235, 0.2);
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.need-website .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.need-website .cta-button:hover::before {
+    left: 100%;
 }
 
 .need-website .cta-button:hover {
-    background: var(--violet-light-color);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(85, 86, 158, 0.4);
-    color: var(--black-color) !important;
+    background: linear-gradient(135deg, #60a5fa, var(--blue-secondary));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 8px 30px rgba(37, 99, 235, 0.5),
+        0 0 30px rgba(96, 165, 250, 0.4);
+    border-color: rgba(96, 165, 250, 0.6);
+}
+
+.need-website .cta-button:active {
+    transform: translateY(-1px) scale(1.02);
 }
 
 @media (max-width: 768px) {

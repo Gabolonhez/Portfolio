@@ -1,0 +1,240 @@
+/* ========================================
+   ABOUT ME SECTION - PROFESSIONAL STORYTELLING
+   ======================================== */
+
+/* About dentro do acordeão */
+.about-section-content {
+    padding: 0;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin-top: 0;
+}
+
+body.light-mode .about-description {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+/* Estilos legados (manter compatibilidade) */
+.about-section {
+    margin: 3rem 0;
+    padding: 0;
+}
+
+.about-container {
+    width: 100%;
+}
+
+/* About Header */
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--violet-color) 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+}
+
+body.light-mode .about-title {
+    background: linear-gradient(135deg, #3a3b7a 0%, var(--violet-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--violet-color), #60a5fa);
+    border-radius: 2px;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    font-weight: 500;
+    color: var(--violet-light-color);
+    margin-top: 1.5rem;
+}
+
+body.light-mode .about-subtitle {
+    color: #4a4b8a;
+}
+
+/* About Content */
+.about-content,
+.about-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Story Grid dentro do acordeão */
+.about-section-content .about-story {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+/* Story Blocks */
+.about-story {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.story-block {
+    background: rgba(37, 99, 235, 0.08);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode .story-block {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.story-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--violet-color), #60a5fa);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.story-block:hover::before {
+    transform: scaleX(1);
+}
+
+.story-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+    border-color: var(--violet-color);
+}
+
+.story-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.story-block h3 {
+    font-size: 1.4rem;
+    color: var(--violet-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+body.light-mode .story-block h3 {
+    color: #3a3b7a;
+}
+
+.story-block p {
+    line-height: 1.8;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+body.light-mode .story-block p {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-story {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+    
+    .timeline-item::before {
+        left: 3px;
+    }
+    
+    .career-timeline {
+        padding: 1.5rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-story {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

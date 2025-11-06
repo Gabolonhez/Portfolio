@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://gabolonhez.github.io/Portfolio/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://gabolonhez.github.io/Portfolio/?lang=pt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gabolonhez.github.io/Portfolio/?lang=en" />
+    <image:image>
+      <image:loc>https://gabolonhez.github.io/Portfolio/src/images/Me.png</image:loc>
+      <image:title>Gabriel Bolonhez - Desenvolvedor Fullstack</image:title>
+      <image:caption>Foto profissional de Gabriel Bolonhez</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Projects -->
+  <url>
+    <loc>https://gerador-curriculos.vercel.app/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://granapp.vercel.app/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://treinohub.vercel.app/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://convertsites.vercel.app/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Social Profiles -->
+  <url>
+    <loc>https://www.linkedin.com/in/gabolonhez/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/Gabolonhez</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
