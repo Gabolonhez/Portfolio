@@ -1,9 +1,7 @@
 .languages {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -11,19 +9,81 @@
 
 .languages li {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding-right: 1rem;
-    font-weight: 700;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.35), rgba(37, 99, 235, 0.25));
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.languages li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.languages li:hover::after {
+    opacity: 1;
+}
+
+body.light-mode .languages li {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(37, 99, 235, 0.05));
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.languages li:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+        0 8px 20px rgba(37, 99, 235, 0.3),
+        0 0 15px rgba(37, 99, 235, 0.2);
+    border-color: rgba(96, 165, 250, 0.5);
 }
 
 .languages li::before {
-    content: "";
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('../images/icons/check.svg');
-    margin-right: .5rem;
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(135deg, var(--blue-secondary), #60a5fa);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.languages li span {
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .languages {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages li {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.95rem;
+    }
 }

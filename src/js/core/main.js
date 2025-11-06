@@ -148,6 +148,46 @@ function updateProfileInfo(profileData) {
   const name = document.getElementById("profile.name");
   name.innerText = profileData.name;
 
+  // Update tagline
+  const tagline = document.getElementById("profile.tagline");
+  if (tagline && profileData.tagline) {
+    tagline.innerText = profileData.tagline;
+    // Remove and re-add typing class to restart animation
+    tagline.classList.remove('typing');
+    void tagline.offsetWidth; // Trigger reflow
+    tagline.classList.add('typing');
+  }
+
+  // Update hero stats
+  if (profileData.hero && profileData.hero.stats) {
+    const stats = profileData.hero.stats;
+    const experienceNum = document.getElementById("hero.experience");
+    const experienceLabel = document.getElementById("hero.experience-label");
+    const projectsNum = document.getElementById("hero.projects");
+    const projectsLabel = document.getElementById("hero.projects-label");
+    const technologiesNum = document.getElementById("hero.technologies");
+    const technologiesLabel = document.getElementById("hero.technologies-label");
+
+    if (experienceNum) experienceNum.textContent = stats.experience;
+    if (experienceLabel) experienceLabel.textContent = stats.experienceLabel;
+    if (projectsNum) projectsNum.textContent = stats.projects;
+    if (projectsLabel) projectsLabel.textContent = stats.projectsLabel;
+    if (technologiesNum) technologiesNum.textContent = stats.technologies;
+    if (technologiesLabel) technologiesLabel.textContent = stats.technologiesLabel;
+  }
+
+  // Update hero CTAs
+  if (profileData.hero && profileData.hero.ctas) {
+    const ctas = profileData.hero.ctas;
+    const ctaProjectsText = document.getElementById("hero.cta-projects-text");
+    const ctaCvText = document.getElementById("hero.cta-cv-text");
+    const ctaContactText = document.getElementById("hero.cta-contact-text");
+
+    if (ctaProjectsText) ctaProjectsText.textContent = ctas.projects;
+    if (ctaCvText) ctaCvText.textContent = ctas.cv;
+    if (ctaContactText) ctaContactText.textContent = ctas.contact;
+  }
+
   const job = document.getElementById("profile.job");
   job.innerText = profileData.job;
 
@@ -218,33 +258,28 @@ function updateHardSkills(profileData) {
   skillsTech.innerText = profileData.skillsTitles.skillsTech;
 
   const hardSkills = document.getElementById("profile.skills.hardSkills");
+  
+  // Mapeamento de níveis para textos traduzidos
+  const levelLabels = {
+    'basic': currentLanguage === 'pt' ? 'Básico' : 'Basic',
+    'intermediate': currentLanguage === 'pt' ? 'Intermediário' : 'Intermediate',
+    'advanced': currentLanguage === 'pt' ? 'Avançado' : 'Advanced'
+  };
+  
   hardSkills.innerHTML = profileData.skills.hardSkills
     .map((skill) => {
-      const progressBar = skill.level
-        ? `<div class="skill-progress">
-          <div class="skill-progress-bar" data-level="${skill.level}" style="width: 0%"></div>
-        </div>
-        <span class="skill-level">${skill.level}%</span>`
+      const levelBadge = skill.level
+        ? `<span class="skill-level ${skill.level}">${levelLabels[skill.level] || skill.level}</span>`
         : "";
 
       return `
         <li class="skill-item">
-          <div class="skill-content">
-            <img src="${skill.logo}" alt="${skill.name}" title="${skill.name}">
-            <span class="skill-name">${skill.name}</span>
-          </div>
-          ${progressBar}
+          <img src="${skill.logo}" alt="${skill.name}" title="${skill.name}">
+          <span class="skill-name">${skill.name}</span>
+          ${levelBadge}
         </li>`;
     })
     .join("");
-
-  // Animate progress bars after a short delay
-  setTimeout(() => {
-    document.querySelectorAll(".skill-progress-bar").forEach((bar) => {
-      const level = bar.dataset.level;
-      bar.style.width = level + "%";
-    });
-  }, 500);
 }
 
 function updateEducation(profileData) {
@@ -271,12 +306,85 @@ function updateLanguages(profileData) {
 
 function updatePortfolio(profileData) {
   const portfolio = document.getElementById("profile.portfolio");
+  
+  if (!profileData.portfolio || profileData.portfolio.length === 0) {
+    portfolio.innerHTML = `
+      <div class="portfolio-empty">
+        <p>${currentLanguage === 'pt' ? 'Nenhum projeto disponível no momento.' : 'No projects available at the moment.'}</p>
+      </div>
+    `;
+    return;
+  }
+
   portfolio.innerHTML = profileData.portfolio
     .map((project) => {
+      // Status badge
+      const statusBadge = project.status ? 
+        `<div class="status-badge ${project.status}">
+          ${project.status === 'completed' 
+            ? (currentLanguage === 'pt' ? 'Concluído' : 'Completed')
+            : (currentLanguage === 'pt' ? 'Em Desenvolvimento' : 'In Progress')
+          }
+        </div>` : '';
+
+      // Featured badge
+      const featuredBadge = project.featured ? 
+        `<div class="featured-badge">
+          ${currentLanguage === 'pt' ? '⭐ Destaque' : '⭐ Featured'}
+        </div>` : '';
+
+      // Thumbnail
+      const thumbnail = project.thumbnail ? 
+        `<img src="${project.thumbnail}" alt="${project.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="placeholder-icon" style="display:none;">💻</div>` :
+        `<div class="placeholder-icon">💻</div>`;
+
+      // Technologies tags
+      const techTags = project.technologies 
+        ? project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')
+        : '';
+
+      // Stats
+      const stats = project.stats 
+        ? Object.entries(project.stats).map(([key, value]) => 
+            `<div class="stat-badge">${value} ${key}</div>`
+          ).join('')
+        : '';
+
+      // Description
+      const description = project.description || '';
+
+      // GitHub link
+      const githubLink = project.github 
+        ? `<a href="${project.github}" class="project-link github secondary" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+          </a>` 
+        : '';
+
+      // Demo link
+      const demoLink = project.url 
+        ? `<a href="${project.url}" class="project-link demo primary" target="_blank" rel="noopener noreferrer">
+            <span>${currentLanguage === 'pt' ? 'Ver Demo' : 'View Demo'}</span>
+          </a>` 
+        : '';
+
       return `
         <li>
-          <h3 ${project.github ? 'class="github"' : ""}>${project.name}</h3>
-          <a href="${project.url}" target="_blank">${project.url}</a>
+          ${featuredBadge}
+          <div class="project-thumbnail">
+            ${thumbnail}
+          </div>
+          <div class="project-content">
+            ${statusBadge}
+            <h3 ${project.github ? 'class="github"' : ''}>${project.name}</h3>
+            ${description ? `<p class="project-description">${description}</p>` : ''}
+            ${stats ? `<div class="project-stats">${stats}</div>` : ''}
+            ${techTags ? `<div class="project-tags">${techTags}</div>` : ''}
+            <div class="project-links">
+              ${demoLink}
+              ${githubLink}
+            </div>
+          </div>
         </li>
       `;
     })
@@ -287,17 +395,48 @@ function updateProfessionalExperience(profileData) {
   const professionalExperience = document.getElementById(
     "profile.professionalExperience"
   );
-  professionalExperience.innerHTML = profileData.professionalExperience
-    .map((experience) => {
-      return `
-        <li>
-          <h3 class="title">${experience.name}</h3>
-          <p class="period">${experience.period}</p>
-          <p> ${experience.description}</p>
-        </li>
-      `;
-    })
-    .join("");
+  
+  // Usar dados de about.timeline se disponível, senão usar professionalExperience
+  const experienceData = profileData.about?.timeline || profileData.professionalExperience;
+  
+  if (!experienceData || experienceData.length === 0) {
+    professionalExperience.innerHTML = '<p>Nenhuma experiência disponível.</p>';
+    return;
+  }
+  
+  // Renderizar com timeline moderna
+  professionalExperience.innerHTML = experienceData.map((experience, index) => {
+    // Suporte para ambos formatos: timeline (about) ou professionalExperience (antigo)
+    const date = experience.date || experience.period;
+    const role = experience.role || experience.name;
+    const company = experience.company || '';
+    const description = experience.description;
+    const technologies = experience.technologies || [];
+    const isCurrent = experience.current || false;
+    
+    const techTags = technologies.length > 0
+      ? technologies.map(tech => 
+          `<span class="timeline-tech-tag">${tech}</span>`
+        ).join('')
+      : '';
+    
+    return `
+      <div class="timeline-item ${isCurrent ? 'current' : ''}" style="animation-delay: ${index * 0.2}s">
+        <div class="timeline-date">${date}</div>
+        <div class="timeline-role">${role}</div>
+        ${company ? `<div class="timeline-company">${company}</div>` : ''}
+        <div class="timeline-description">${description}</div>
+        ${techTags ? `<div class="timeline-tech">${techTags}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+  
+  // Animar items após um delay
+  setTimeout(() => {
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.classList.add('animate-in');
+    });
+  }, 300);
 }
 
 async function loadAndDisplayData(language) {
@@ -343,6 +482,11 @@ async function loadAndDisplayData(language) {
     updateProfessionalExperience(profileData);
     updateContactSection(profileData);
     updateAccordionTitles(profileData);
+    
+    // Update About section
+    if (typeof updateAboutSection === 'function') {
+      updateAboutSection(profileData);
+    }
 
     // Update Need Website section
     const websiteTitle = document.getElementById("website-title");

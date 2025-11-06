@@ -2,20 +2,40 @@
   "name": "Gabriel Bolonhez",
   "photo": "./src/images/Me.png",
   "job": "Desenvolvedor Fullstack",
+  "tagline": "Construindo soluções profissionais, modernas e de qualidade",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
+  "hero": {
+    "stats": {
+      "experience": "2",
+      "experienceLabel": "Anos",
+      "projects": "5+",
+      "projectsLabel": "Projetos",
+      "technologies": "5+",
+      "technologiesLabel": "Tecnologias"
+    },
+    "ctas": {
+      "projects": "Ver Projetos",
+      "cv": "Download CV",
+      "contact": "Contato"
+    }
+  },
   "skillsTitles": {
-    "skillsTech": "Tecnologias:",
-    "skillsPersonal": "Pessoal:"
+    "skillsTech": "Tecnologias",
+    "skillsPersonal": "Soft Skills"
   },
   "accordionTitles": {
     "skills": "Habilidades",
-    "education": "Formação",
+    "education": "Formação acadêmica",
     "languages": "Idiomas",
-    "portfolio": "Projetos",
-    "professionalExperience": "Experiência",
+    "portfolio": "Projetos em destaque",
+    "professionalExperience": "Experiência profissional",
     "contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description": "Desenvolvedor Fullstack com 2+ anos de experiência em TI, com foco em criar soluções web modernas e escaláveis. Minha jornada começou no Service Desk, evoluiu para QA e hoje atuo com desenvolvimento utilizando Angular, React, TypeScript, C# .NET e SQL. Apaixonado por código limpo, metodologias ágeis e por transformar desafios complexos em soluções elegantes que geram impacto real."
   },
   "contactLabels": {
     "email": "Email",
@@ -32,47 +52,63 @@
     "hardSkills": [
       {
         "name": "HTML",
-        "logo": "./src/images/html.png"
+        "logo": "./src/images/html.png",
+        "level": "advanced"
       },
       {
         "name": "CSS",
-        "logo": "./src/images/css.png"
+        "logo": "./src/images/css.png",
+        "level": "advanced"
       },
       {
         "name": "JavaScript",
-        "logo": "./src/images/js.png"
+        "logo": "./src/images/js.png",
+        "level": "advanced"
       },
       {
-        "name": "Git",
-        "logo": "./src/images/git.png"
-      },
-      {
-        "name": "Github",
-        "logo": "./src/images/github.png"
-      },
-      {
-        "name": "Vscode",
-        "logo": "./src/images/vscode.png"
-      },
-      {
-        "name": "SQL",
-        "logo": "./src/images/sql-server.png"
+        "name": "TypeScript",
+        "logo": "./src/images/typescript.png",
+        "level": "intermediate"
       },
       {
         "name": "React",
-        "logo": "./src/images/react.png"
+        "logo": "./src/images/react.png",
+        "level": "intermediate"
       },
       {
-          "name": "Typescript",
-          "logo": "./src/images/typescript.png"
+        "name": "Angular",
+        "logo": "./src/images/icons/angular.png",
+        "level": "intermediate"
       },
-       {
-          "name": "Node.js",
-          "logo": "./src/images/nodejs.png"
+      {
+        "name": "Node.js",
+        "logo": "./src/images/nodejs.png",
+        "level": "intermediate"
       },
-       {
-          "name": "C#",
-          "logo": "./src/images/icons/csharp.png"
+      {
+        "name": "C#",
+        "logo": "./src/images/icons/csharp.png",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "logo": "./src/images/sql-server.png",
+        "level": "intermediate"
+      },
+      {
+        "name": "Git",
+        "logo": "./src/images/git.png",
+        "level": "advanced"
+      },
+      {
+        "name": "Github",
+        "logo": "./src/images/github.png",
+        "level": "advanced"
+      },
+      {
+        "name": "VS Code",
+        "logo": "./src/images/vscode.png",
+        "level": "advanced"
       }
     ],
     "softSkills": [
@@ -99,14 +135,61 @@
   ],
   "portfolio": [
     {
-        "name": "Gerador de curriculo ATS:",
+        "name": "Gerador de Currículo ATS",
+        "description": "Sistema inteligente que otimiza currículos para sistemas ATS (Applicant Tracking System), aumentando as chances de aprovação em processos seletivos.",
         "url": "https://gerador-curriculos.vercel.app/",
-        "github": true
+        "github": "https://github.com/Gabolonhez/gerador-curriculos",
+        "thumbnail": "./src/images/projects/gerador-curriculo.png",
+        "technologies": ["React", "TypeScript", "CSS", "PDF"],
+        "status": "completed",
+        "featured": true,
+        "stats": {
+          "users": "500+",
+          "rating": "4.8/5.0"
+        }
     },
     {
-        "name": "Aplicativo de controle financeiro:",
+        "name": "GranApp - Controle Financeiro",
+        "description": "Aplicativo completo para gestão financeira pessoal com gráficos, categorização de despesas e relatórios detalhados.",
         "url": "https://granapp.vercel.app/",
-        "github": true
+        "github": "https://github.com/Gabolonhez/granapp",
+        "thumbnail": "./src/images/projects/granapp.png",
+        "technologies": ["React", "JavaScript", "CSS", "Charts"],
+        "status": "completed",
+        "featured": true,
+        "stats": {
+          "features": "15+"
+        }
+    },
+    {
+        "name": "TreinoHub - Sistema de Dieta e Treino",
+        "description": "Plataforma para gerenciamento de treinos e dietas, com acompanhamento de progresso e planejamento personalizado.",
+        "url": "https://treinohub.vercel.app/",
+        "github": "https://github.com/Gabolonhez/treinohub",
+        "thumbnail": "./src/images/projects/treinohub.png",
+        "technologies": ["React", "TypeScript", "Node.js", "SQL"],
+        "status": "completed",
+        "featured": false
+    },
+    {
+        "name": "Portfolio Profissional",
+        "description": "Portfolio responsivo e moderno com tema dark/light, multi-idioma e animações interativas.",
+        "url": "https://gabolonhez.github.io/Portfolio/",
+        "github": "https://github.com/Gabolonhez/Portfolio",
+        "thumbnail": "./src/images/projects/portfolio.png",
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"],
+        "status": "completed",
+        "featured": false
+    },
+    {
+        "name": "ConvertSites - Landing Page",
+        "description": "Landing page profissional para serviço de criação de sites, focada em conversão e experiência do usuário.",
+        "url": "https://convertsites.vercel.app/",
+        "github": null,
+        "thumbnail": "./src/images/projects/convertsites.png",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "status": "completed",
+        "featured": false
     }
   ],
   "professionalExperience": [

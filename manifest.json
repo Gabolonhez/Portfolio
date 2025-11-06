@@ -4,8 +4,8 @@
   "description": "Portfólio profissional de Gabriel Bolonhez, desenvolvedor front-end e especialista em QA",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e1e2e",
-  "theme_color": "#55569E",
+  "background_color": "#0a0e27",
+  "theme_color": "#2563eb",
   "orientation": "portrait-primary",
   "icons": [
     {

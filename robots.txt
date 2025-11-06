@@ -1,0 +1,40 @@
+# Robots.txt - Gabriel Bolonhez Portfolio
+# Permitir acesso total aos crawlers de busca
+
+User-agent: *
+Allow: /
+
+# Bloquear apenas diretórios temporários ou de desenvolvimento (se existirem)
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemap
+Sitemap: https://gabolonhez.github.io/Portfolio/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga (opcional)
+Crawl-delay: 1
+
+# Permitir especificamente para bots principais
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# SEO específico para imagens
+User-agent: Googlebot-Image
+Allow: /src/images/
+
+# SEO específico para mobile
+User-agent: Googlebot-Mobile
+Allow: /

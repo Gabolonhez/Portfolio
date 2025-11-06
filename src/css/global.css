@@ -1,18 +1,31 @@
 :root {
     --black-color: #000000;
     --white-color: #ffffff;
-    --violet-color:  #55569E;
-    --violet-light-color: #c2c3f3;
-    --success-color: #28a745;
-    --error-color: #dc3545;
-    --warning-color: #ffc107;
+    
+    /* Nova paleta azul escuro */
+    --dark-bg: #0a0e27;
+    --dark-bg-secondary: #0f1629;
+    --dark-bg-tertiary: #151b35;
+    --blue-primary: #1e3a8a;
+    --blue-secondary: #2563eb;
+    --blue-light: #3b82f6;
+    --blue-accent: #60a5fa;
+    --blue-neon: #00d9ff;
+    
+    /* Cores legadas (manter compatibilidade) */
+    --violet-color: #2563eb;
+    --violet-light-color: #60a5fa;
+    
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
 
     --main-font: 'Open Sans', sans-serif;
     --secondary-font: 'Neue Machina', sans-serif;
     
     --border-radius: 12px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 25px rgba(37, 99, 235, 0.4);
     --transition: all 0.3s ease;
 }
 
@@ -26,9 +39,23 @@ html {
 }
 
 body.dark-mode {
-    background: linear-gradient(135deg, #1e1e2e 0%, #2d1b69 50%, #1e1e2e 100%);
+    background: linear-gradient(135deg, #0d1428 0%, #121a35 25%, #1a2747 50%, #121a35 75%, #0d1428 100%);
     color: var(--white-color);
     min-height: 100vh;
+    position: relative;
+}
+
+body.dark-mode::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(0, 217, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 body.light-mode {
@@ -59,7 +86,8 @@ body {
 }
 
 body.dark-mode {
-    border: 1px solid var(--white-color);
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.25), inset 0 0 80px rgba(0, 217, 255, 0.03);
 }
 
 body.light-mode {

@@ -1,0 +1,48 @@
+{
+  "name": "portfolio-gabriel-bolonhez",
+  "version": "2.0.0",
+  "description": "Portfolio profissional de Gabriel Bolonhez - Desenvolvedor Fullstack",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "build": "node build.js",
+    "minify:js": "npm run minify:js:main && npm run minify:js:hero && npm run minify:js:portfolio && npm run minify:js:about && npm run minify:js:lazy",
+    "minify:js:main": "terser src/js/main.js -o src/js/main.min.js -c -m",
+    "minify:js:hero": "terser src/js/hero.js -o src/js/hero.min.js -c -m",
+    "minify:js:portfolio": "terser src/js/portfolio.js -o src/js/portfolio.min.js -c -m",
+    "minify:js:about": "terser src/js/about.js -o src/js/about.min.js -c -m",
+    "minify:js:lazy": "terser src/js/lazyLoading.js -o src/js/lazyLoading.min.js -c -m",
+    "minify:css": "cleancss -o src/css/styles.min.css src/css/*.css",
+    "optimize:images": "node optimize-images.js",
+    "lighthouse": "lighthouse https://gabolonhez.github.io/Portfolio/ --view",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gabolonhez/Portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "developer",
+    "angular",
+    "react",
+    "typescript",
+    "dotnet",
+    "nodejs"
+  ],
+  "author": {
+    "name": "Gabriel Bolonhez",
+    "email": "gabriel.bolonhez@outlook.com",
+    "url": "https://gabolonhez.github.io/Portfolio/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "lighthouse": "^11.4.0",
+    "serve": "^14.2.1",
+    "sharp-cli": "^4.2.0",
+    "terser": "^5.26.0"
+  }
+}
