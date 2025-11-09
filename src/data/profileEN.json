@@ -3,6 +3,7 @@
     "name": "Gabriel Bolonhez",
     "photo": "./src/images/Me.png",
     "job": "Fullstack developer",
+    "job-title": "Developer",
     "tagline": "Building modernity, professionalism, and quality solutions",
     "location": "São Bernardo do Campo, São Paulo, Brazil",
     "phone": "+55 (11) 94367-8485",
@@ -36,7 +37,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Fullstack Developer with 2+ years of IT experience, focused on creating modern and scalable web solutions. My journey started at Service Desk, evolved to QA, and today I work with development using Angular, React, TypeScript, C# .NET and SQL. Passionate about clean code, agile methodologies, and transforming complex challenges into elegant solutions that generate real impact."
+    "description": "Fullstack developer with 2+ years of IT experience, my goal is to develop modern, high-quality solutions that generate real value for the business."
   },
   "contactLabels": {
     "email": "Email",

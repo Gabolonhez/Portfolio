@@ -148,6 +148,16 @@ function updateProfileInfo(profileData) {
   const name = document.getElementById("profile.name");
   name.innerText = profileData.name;
 
+  // Update job-title
+  const jobTitle = document.getElementById("profile.job-title");
+  if (jobTitle && profileData["job-title"]) {
+    jobTitle.innerText = profileData["job-title"];
+    // Remove and re-add typing class to restart animation
+    jobTitle.classList.remove('typing');
+    void jobTitle.offsetWidth; // Trigger reflow
+    jobTitle.classList.add('typing');
+  }
+
   // Update tagline
   const tagline = document.getElementById("profile.tagline");
   if (tagline && profileData.tagline) {
@@ -445,6 +455,7 @@ async function loadAndDisplayData(language) {
     const loadingElements = [
       "profile.name",
       "profile.job",
+      "profile.job-title",
       "profile.location",
       "profile.phone",
       "profile.email",
