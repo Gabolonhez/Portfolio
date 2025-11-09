@@ -66,6 +66,7 @@ body.light-mode .header .photo {
     font-weight: 800;
     letter-spacing: -0.5px;
     line-height: 1.2;
+    flex-wrap: wrap;
 }
 
 body.light-mode .header .title {
@@ -73,6 +74,15 @@ body.light-mode .header .title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.header .job-title {
+    font-size: 1.5rem;
+    color: var(--violet-color);
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* Tagline/Subtitle */
@@ -83,6 +93,9 @@ body.light-mode .header .title {
     margin: 0 0 0.5rem 0;
     font-weight: 600;
     letter-spacing: 0.5px;
+    max-width: 90%;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 body.light-mode .header .tagline {
@@ -159,8 +172,7 @@ body.light-mode .stat-label {
     margin: 2rem 0 1rem 0;
 }
 
-.cta-primary,
-.cta-secondary {
+.cta {
     padding: 0.875rem 2rem;
     border-radius: 12px;
     font-weight: 600;
@@ -176,7 +188,7 @@ body.light-mode .stat-label {
     overflow: hidden;
 }
 
-.cta-primary {
+/* .cta-primary {
     background: linear-gradient(135deg, var(--violet-color) 0%, #60a5fa 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
@@ -200,19 +212,23 @@ body.light-mode .stat-label {
 
 .cta-primary:hover::before {
     left: 100%;
-}
+} */
 
-.cta-secondary {
+.cta {
     background: transparent;
     border: 2px solid var(--violet-color);
     color: var(--violet-color);
 }
 
-body.light-mode .cta-secondary {
+.hero-ctas a {
+    text-decoration: none;
+}
+
+body.light-mode .cta {
     color: var(--violet-color);
 }
 
-body.dark-mode .cta-secondary {
+body.dark-mode .cta {
     color: var(--violet-light-color);
 }
 
@@ -485,6 +501,17 @@ body.light-mode .information .email a:hover {
     .header .tagline {
         font-size: 1rem;
         padding: 0 1rem;
+        max-width: 95%;
+    }
+
+    /* Disable typing animation on mobile for better text wrapping */
+    .header .tagline.typing {
+        overflow: visible;
+        border-right: none;
+        white-space: normal;
+        animation: none;
+        max-width: 95%;
+        word-wrap: break-word;
     }
 
     .hero-stats {

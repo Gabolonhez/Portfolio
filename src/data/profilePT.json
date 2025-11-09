@@ -2,6 +2,7 @@
   "name": "Gabriel Bolonhez",
   "photo": "./src/images/Me.png",
   "job": "Desenvolvedor Fullstack",
+  "job-title": "Desenvolvedor",
   "tagline": "Construindo soluções profissionais, modernas e de qualidade",
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
@@ -35,7 +36,7 @@
   },
   "about": {
     "title": "Sobre mim",
-    "description": "Desenvolvedor Fullstack com 2+ anos de experiência em TI, com foco em criar soluções web modernas e escaláveis. Minha jornada começou no Service Desk, evoluiu para QA e hoje atuo com desenvolvimento utilizando Angular, React, TypeScript, C# .NET e SQL. Apaixonado por código limpo, metodologias ágeis e por transformar desafios complexos em soluções elegantes que geram impacto real."
+    "description": "Desenvolvedor fullstack com mais de 2 anos de experiência em TI, o meu objetivo é desenvolver soluções modernas e de qualidade que gerem valor real para os negócios."
   },
   "contactLabels": {
     "email": "Email",
@@ -135,26 +136,19 @@
         "url": "https://gerador-curriculos.vercel.app/",
         "github": "https://github.com/Gabolonhez/gerador-curriculos",
         "thumbnail": "./src/images/projects/gerador-curriculo.png",
-        "technologies": ["React", "TypeScript", "CSS", "PDF"],
+        "technologies": ["React", "TypeScript", "CSS", "JavaScript"],
         "status": "completed",
-        "featured": true,
-        "stats": {
-          "users": "500+",
-          "rating": "4.8/5.0"
-        }
+        "featured": true
     },
     {
-        "name": "GranApp - Controle Financeiro",
+        "name": "Granapp - Controle Financeiro",
         "description": "Aplicativo completo para gestão financeira pessoal com gráficos, categorização de despesas e relatórios detalhados.",
         "url": "https://granapp.vercel.app/",
         "github": "https://github.com/Gabolonhez/granapp",
         "thumbnail": "./src/images/projects/granapp.png",
-        "technologies": ["React", "JavaScript", "CSS", "Charts"],
+        "technologies": ["React", "JavaScript", "CSS", "SQL", "Node.js"],
         "status": "completed",
-        "featured": true,
-        "stats": {
-          "features": "15+"
-        }
+        "featured": true
     },
     {
         "name": "TreinoHub - Sistema de Dieta e Treino",
@@ -172,7 +166,7 @@
         "url": "https://gabolonhez.github.io/Portfolio/",
         "github": "https://github.com/Gabolonhez/Portfolio",
         "thumbnail": "./src/images/projects/portfolio.png",
-        "technologies": ["HTML", "CSS", "JavaScript", "JSON"],
+        "technologies": ["HTML", "CSS", "JavaScript"],
         "status": "completed",
         "featured": false
     },
@@ -182,7 +176,7 @@
         "url": "https://convertsites.vercel.app/",
         "github": null,
         "thumbnail": "./src/images/projects/convertsites.png",
-        "technologies": ["HTML", "CSS", "JavaScript"],
+        "technologies": ["React", "JavaScript", "CSS"],
         "status": "completed",
         "featured": false
     }

@@ -151,7 +151,7 @@ body.light-mode .acordeon .trigger:hover {
 @media only screen and (max-width: 480px) {
     .acordeon .trigger {
         font-size: 1rem;
-        padding: 0.5rem 0.75rem;
+        padding: 0.5rem 0.5rem;
     }
     
     .acordeon .trigger h2 {
@@ -163,8 +163,14 @@ body.light-mode .acordeon .trigger:hover {
         height: 1.2rem;
     }
     
+    .acordeon .content {
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+    
     .acordeon.open .content {
-        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        padding: 0.5rem 0 1rem 0 !important;
+        overflow-x: hidden;
     }
 }
 

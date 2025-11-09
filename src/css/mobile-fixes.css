@@ -1,0 +1,34 @@
+/* Mobile overflow and responsive fixes */
+@media only screen and (max-width: 480px) {
+    html {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
+    body {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        overflow-x: hidden;
+        max-width: calc(100vw - 1rem);
+        box-sizing: border-box;
+    }
+    
+    .main {
+        overflow-x: hidden;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    
+    /* Previne qualquer elemento de ultrapassar a largura */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Garante que imagens não ultrapassem */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
