@@ -1,5 +1,5 @@
 # Portfolio
-<img width="1889" height="990" alt="image" src="https://github.com/user-attachments/assets/e9727a72-0676-4220-9e1b-90be9c251107" />
+<img width="1908" height="992" alt="image" src="https://github.com/user-attachments/assets/215af7ce-473c-49c8-b050-d6f3aca44ea1" />
 
 ## 📑 Descrição
 
