@@ -141,6 +141,18 @@ body.light-mode .acordeon .trigger:hover {
     .acordeon .trigger {
         font-size: 1.2rem;
         padding: 0.75rem 1rem;
+        justify-content: center;
+        position: relative;
+    }
+
+    .acordeon .trigger h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .acordeon .trigger::after {
+        position: absolute;
+        right: 1rem;
     }
     
     .acordeon.open .content {

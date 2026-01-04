@@ -361,6 +361,12 @@ body.light-mode .project-link.secondary {
     .portfolio {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .portfolio li {
+        width: 100%;
+        max-width: 450px;
     }
 
     .project-thumbnail {

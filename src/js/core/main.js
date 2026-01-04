@@ -153,9 +153,9 @@ function updateProfileInfo(profileData) {
   if (jobTitle && profileData["job-title"]) {
     jobTitle.innerText = profileData["job-title"];
     // Remove and re-add typing class to restart animation
-    jobTitle.classList.remove('typing');
+    jobTitle.classList.remove("typing");
     void jobTitle.offsetWidth; // Trigger reflow
-    jobTitle.classList.add('typing');
+    jobTitle.classList.add("typing");
   }
 
   // Update tagline
@@ -163,9 +163,9 @@ function updateProfileInfo(profileData) {
   if (tagline && profileData.tagline) {
     tagline.innerText = profileData.tagline;
     // Remove and re-add typing class to restart animation
-    tagline.classList.remove('typing');
+    tagline.classList.remove("typing");
     void tagline.offsetWidth; // Trigger reflow
-    tagline.classList.add('typing');
+    tagline.classList.add("typing");
   }
 
   // Update hero stats
@@ -176,14 +176,17 @@ function updateProfileInfo(profileData) {
     const projectsNum = document.getElementById("hero.projects");
     const projectsLabel = document.getElementById("hero.projects-label");
     const technologiesNum = document.getElementById("hero.technologies");
-    const technologiesLabel = document.getElementById("hero.technologies-label");
+    const technologiesLabel = document.getElementById(
+      "hero.technologies-label"
+    );
 
     if (experienceNum) experienceNum.textContent = stats.experience;
     if (experienceLabel) experienceLabel.textContent = stats.experienceLabel;
     if (projectsNum) projectsNum.textContent = stats.projects;
     if (projectsLabel) projectsLabel.textContent = stats.projectsLabel;
     if (technologiesNum) technologiesNum.textContent = stats.technologies;
-    if (technologiesLabel) technologiesLabel.textContent = stats.technologiesLabel;
+    if (technologiesLabel)
+      technologiesLabel.textContent = stats.technologiesLabel;
   }
 
   // Update hero CTAs
@@ -198,11 +201,27 @@ function updateProfileInfo(profileData) {
     if (ctaContactText) ctaContactText.textContent = ctas.contact;
   }
 
+  // Update CV links
+  if (profileData.cvFile) {
+    const cvPath = `./src/files/${profileData.cvFile}`;
+    const heroCvLink = document.getElementById("hero.cta-cv");
+    const footerCvLink = document.getElementById("cv");
+
+    if (heroCvLink) {
+      heroCvLink.href = cvPath;
+      heroCvLink.setAttribute("download", profileData.cvFile);
+    }
+    if (footerCvLink) {
+      footerCvLink.href = cvPath;
+      footerCvLink.setAttribute("download", profileData.cvFile);
+    }
+  }
+
   const job = document.getElementById("profile.job");
-  job.innerText = profileData.job;
+  if (job) job.innerText = profileData.job;
 
   const location = document.getElementById("profile.location");
-  location.innerText = profileData.location;
+  if (location) location.innerText = profileData.location;
 
   // Update phone link - element is already an <a> tag in HTML
   const phone = document.getElementById("profile.phone");
@@ -268,18 +287,20 @@ function updateHardSkills(profileData) {
   skillsTech.innerText = profileData.skillsTitles.skillsTech;
 
   const hardSkills = document.getElementById("profile.skills.hardSkills");
-  
+
   // Mapeamento de níveis para textos traduzidos
   const levelLabels = {
-    'basic': currentLanguage === 'pt' ? 'Básico' : 'Basic',
-    'intermediate': currentLanguage === 'pt' ? 'Intermediário' : 'Intermediate',
-    'advanced': currentLanguage === 'pt' ? 'Avançado' : 'Advanced'
+    basic: currentLanguage === "pt" ? "Básico" : "Basic",
+    intermediate: currentLanguage === "pt" ? "Intermediário" : "Intermediate",
+    advanced: currentLanguage === "pt" ? "Avançado" : "Advanced",
   };
-  
+
   hardSkills.innerHTML = profileData.skills.hardSkills
     .map((skill) => {
       const levelBadge = skill.level
-        ? `<span class="skill-level ${skill.level}">${levelLabels[skill.level] || skill.level}</span>`
+        ? `<span class="skill-level ${skill.level}">${
+            levelLabels[skill.level] || skill.level
+          }</span>`
         : "";
 
       return `
@@ -316,11 +337,15 @@ function updateLanguages(profileData) {
 
 function updatePortfolio(profileData) {
   const portfolio = document.getElementById("profile.portfolio");
-  
+
   if (!profileData.portfolio || profileData.portfolio.length === 0) {
     portfolio.innerHTML = `
       <div class="portfolio-empty">
-        <p>${currentLanguage === 'pt' ? 'Nenhum projeto disponível no momento.' : 'No projects available at the moment.'}</p>
+        <p>${
+          currentLanguage === "pt"
+            ? "Nenhum projeto disponível no momento."
+            : "No projects available at the moment."
+        }</p>
       </div>
     `;
     return;
@@ -329,54 +354,67 @@ function updatePortfolio(profileData) {
   portfolio.innerHTML = profileData.portfolio
     .map((project) => {
       // Status badge
-      const statusBadge = project.status ? 
-        `<div class="status-badge ${project.status}">
-          ${project.status === 'completed' 
-            ? (currentLanguage === 'pt' ? 'Concluído' : 'Completed')
-            : (currentLanguage === 'pt' ? 'Em Desenvolvimento' : 'In Progress')
+      const statusBadge = project.status
+        ? `<div class="status-badge ${project.status}">
+          ${
+            project.status === "completed"
+              ? currentLanguage === "pt"
+                ? "Concluído"
+                : "Completed"
+              : currentLanguage === "pt"
+              ? "Em Desenvolvimento"
+              : "In Progress"
           }
-        </div>` : '';
+        </div>`
+        : "";
 
       // Featured badge
-      const featuredBadge = project.featured ? 
-        `<div class="featured-badge">
-          ${currentLanguage === 'pt' ? '⭐ Destaque' : '⭐ Featured'}
-        </div>` : '';
+      const featuredBadge = project.featured
+        ? `<div class="featured-badge">
+          ${currentLanguage === "pt" ? "⭐ Destaque" : "⭐ Featured"}
+        </div>`
+        : "";
 
       // Thumbnail
-      const thumbnail = project.thumbnail ? 
-        `<img src="${project.thumbnail}" alt="${project.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-         <div class="placeholder-icon" style="display:none;">💻</div>` :
-        `<div class="placeholder-icon">💻</div>`;
+      const thumbnail = project.thumbnail
+        ? `<img src="${project.thumbnail}" alt="${project.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="placeholder-icon" style="display:none;">💻</div>`
+        : `<div class="placeholder-icon">💻</div>`;
 
       // Technologies tags
-      const techTags = project.technologies 
-        ? project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')
-        : '';
+      const techTags = project.technologies
+        ? project.technologies
+            .map((tech) => `<span class="tech-tag">${tech}</span>`)
+            .join("")
+        : "";
 
       // Stats
-      const stats = project.stats 
-        ? Object.entries(project.stats).map(([key, value]) => 
-            `<div class="stat-badge">${value} ${key}</div>`
-          ).join('')
-        : '';
+      const stats = project.stats
+        ? Object.entries(project.stats)
+            .map(
+              ([key, value]) => `<div class="stat-badge">${value} ${key}</div>`
+            )
+            .join("")
+        : "";
 
       // Description
-      const description = project.description || '';
+      const description = project.description || "";
 
       // GitHub link
-      const githubLink = project.github 
+      const githubLink = project.github
         ? `<a href="${project.github}" class="project-link github secondary" target="_blank" rel="noopener noreferrer">
             <span>GitHub</span>
-          </a>` 
-        : '';
+          </a>`
+        : "";
 
       // Demo link
-      const demoLink = project.url 
-        ? `<a href="${project.url}" class="project-link demo primary" target="_blank" rel="noopener noreferrer">
-            <span>${currentLanguage === 'pt' ? 'Ver Demo' : 'View Demo'}</span>
-          </a>` 
-        : '';
+      const demoLink = project.url
+        ? `<a href="${
+            project.url
+          }" class="project-link demo primary" target="_blank" rel="noopener noreferrer">
+            <span>${currentLanguage === "pt" ? "Ver Demo" : "View Demo"}</span>
+          </a>`
+        : "";
 
       return `
         <li>
@@ -386,10 +424,14 @@ function updatePortfolio(profileData) {
           </div>
           <div class="project-content">
             ${statusBadge}
-            <h3 ${project.github ? 'class="github"' : ''}>${project.name}</h3>
-            ${description ? `<p class="project-description">${description}</p>` : ''}
-            ${stats ? `<div class="project-stats">${stats}</div>` : ''}
-            ${techTags ? `<div class="project-tags">${techTags}</div>` : ''}
+            <h3 ${project.github ? 'class="github"' : ""}>${project.name}</h3>
+            ${
+              description
+                ? `<p class="project-description">${description}</p>`
+                : ""
+            }
+            ${stats ? `<div class="project-stats">${stats}</div>` : ""}
+            ${techTags ? `<div class="project-tags">${techTags}</div>` : ""}
             <div class="project-links">
               ${demoLink}
               ${githubLink}
@@ -405,46 +447,52 @@ function updateProfessionalExperience(profileData) {
   const professionalExperience = document.getElementById(
     "profile.professionalExperience"
   );
-  
+
   // Usar dados de about.timeline se disponível, senão usar professionalExperience
-  const experienceData = profileData.about?.timeline || profileData.professionalExperience;
-  
+  const experienceData =
+    profileData.about?.timeline || profileData.professionalExperience;
+
   if (!experienceData || experienceData.length === 0) {
-    professionalExperience.innerHTML = '<p>Nenhuma experiência disponível.</p>';
+    professionalExperience.innerHTML = "<p>Nenhuma experiência disponível.</p>";
     return;
   }
-  
+
   // Renderizar com timeline moderna
-  professionalExperience.innerHTML = experienceData.map((experience, index) => {
-    // Suporte para ambos formatos: timeline (about) ou professionalExperience (antigo)
-    const date = experience.date || experience.period;
-    const role = experience.role || experience.name;
-    const company = experience.company || '';
-    const description = experience.description;
-    const technologies = experience.technologies || [];
-    const isCurrent = experience.current || false;
-    
-    const techTags = technologies.length > 0
-      ? technologies.map(tech => 
-          `<span class="timeline-tech-tag">${tech}</span>`
-        ).join('')
-      : '';
-    
-    return `
-      <div class="timeline-item ${isCurrent ? 'current' : ''}" style="animation-delay: ${index * 0.2}s">
+  professionalExperience.innerHTML = experienceData
+    .map((experience, index) => {
+      // Suporte para ambos formatos: timeline (about) ou professionalExperience (antigo)
+      const date = experience.date || experience.period;
+      const role = experience.role || experience.name;
+      const company = experience.company || "";
+      const description = experience.description;
+      const technologies = experience.technologies || [];
+      const isCurrent = experience.current || false;
+
+      const techTags =
+        technologies.length > 0
+          ? technologies
+              .map((tech) => `<span class="timeline-tech-tag">${tech}</span>`)
+              .join("")
+          : "";
+
+      return `
+      <div class="timeline-item ${
+        isCurrent ? "current" : ""
+      }" style="animation-delay: ${index * 0.2}s">
         <div class="timeline-date">${date}</div>
         <div class="timeline-role">${role}</div>
-        ${company ? `<div class="timeline-company">${company}</div>` : ''}
+        ${company ? `<div class="timeline-company">${company}</div>` : ""}
         <div class="timeline-description">${description}</div>
-        ${techTags ? `<div class="timeline-tech">${techTags}</div>` : ''}
+        ${techTags ? `<div class="timeline-tech">${techTags}</div>` : ""}
       </div>
     `;
-  }).join('');
-  
+    })
+    .join("");
+
   // Animar items após um delay
   setTimeout(() => {
-    document.querySelectorAll('.timeline-item').forEach(item => {
-      item.classList.add('animate-in');
+    document.querySelectorAll(".timeline-item").forEach((item) => {
+      item.classList.add("animate-in");
     });
   }, 300);
 }
@@ -493,9 +541,9 @@ async function loadAndDisplayData(language) {
     updateProfessionalExperience(profileData);
     updateContactSection(profileData);
     updateAccordionTitles(profileData);
-    
+
     // Update About section
-    if (typeof updateAboutSection === 'function') {
+    if (typeof updateAboutSection === "function") {
       updateAboutSection(profileData);
     }
 

@@ -29,11 +29,27 @@ function updateButtonStates() {
   }
 }
 
-// Load saved language preference
+// Load saved language preference and detect browser language
 document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem("preferredLanguage");
-  if (savedLanguage && savedLanguage !== currentLanguage) {
-    changeLanguage(savedLanguage);
+  let targetLanguage = currentLanguage;
+
+  if (savedLanguage) {
+    targetLanguage = savedLanguage;
+  } else {
+    // Detect browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang) {
+      if (browserLang.startsWith("en")) {
+        targetLanguage = "en";
+      } else if (browserLang.startsWith("pt")) {
+        targetLanguage = "pt";
+      }
+    }
+  }
+
+  if (targetLanguage !== currentLanguage) {
+    changeLanguage(targetLanguage);
   }
   updateButtonStates();
 });

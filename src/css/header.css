@@ -409,7 +409,17 @@ body.light-mode .information .email a:hover {
 .information .email a:hover::after {
     width: 100%;
 }
+/* Mobile Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .information {
+        align-items: center;
+    }
 
+    .information p {
+        justify-content: center;
+        text-align: center;
+    }
+}
 /* Add small external link indicators */
 .information .phone a::before,
 .information .email a::before {
@@ -484,7 +494,7 @@ body.light-mode .information .email a:hover {
 @media only screen and (max-width: 480px) {
     .header {
         padding: 2rem 0.75rem;
-        margin: -1rem -1rem 1.5rem -1rem;
+        margin: -0.5rem -0.5rem 1.5rem -0.5rem;
     }
     
     .header .photo {
@@ -543,27 +553,49 @@ body.light-mode .information .email a:hover {
         gap: 0.75rem;
     }
 
-    .cta-primary,
-    .cta-secondary {
+    .cta {
         width: 100%;
         justify-content: center;
         padding: 0.75rem 1.5rem;
     }
     
     .information {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 0.7rem;
-        padding: 1rem 0.75rem;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
         margin-top: 1rem;
-    }
-    .information {
-        align-items: flex-start;
-        gap: 0.35rem;
-        padding: 1rem 0.75rem;
         width: 100%;
-        max-width: 98vw;
         box-sizing: border-box;
-        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .information p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0.25rem 0;
+    }
+
+    .information p::before {
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+        transform: scale(1.2);
+    }
+
+    .information .phone a,
+    .information .email a {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
     }
     
     .change-theme {

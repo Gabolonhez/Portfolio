@@ -7,9 +7,10 @@
   "location": "São Bernardo do Campo, São Paulo, Brasil",
   "phone": "+55 (11) 94367-8485",
   "email": "gbbolonhez@gmail.com",
+  "cvFile": "gabriel_bolonhez_curriculo.pdf",
   "hero": {
     "stats": {
-      "experience": "2",
+      "experience": "2+",
       "experienceLabel": "Anos",
       "projects": "5+",
       "projectsLabel": "Projetos",
@@ -36,7 +37,7 @@
   },
   "about": {
     "title": "Sobre mim",
-    "description": "Desenvolvedor fullstack com mais de 2 anos de experiência em TI, o meu objetivo é desenvolver soluções modernas e de qualidade que gerem valor real para os negócios."
+    "description": "Como Desenvolvedor Fullstack, meu foco vai além do código: busco construir soluções (softwares, sites e aplicativos) que gerem valor real para o negócio e resolvam problemas do usuário final. Atualmente no 7º semestre de Sistemas de Informação e atuando como Desenvolvedor Fullstack, trabalho com metodologias ágeis, priorizando a qualidade e as boas práticas de engenharia de software. Entendo o impacto de cada linha de código no produto e busco constantemente otimizar a experiência e a interface (UI/UX)."
   },
   "contactLabels": {
     "email": "Email",
@@ -146,7 +147,7 @@
         "url": "https://granapp.vercel.app/",
         "github": "https://github.com/Gabolonhez/granapp",
         "thumbnail": "./src/images/projects/granapp.png",
-        "technologies": ["React", "JavaScript", "CSS", "SQL", "Node.js"],
+        "technologies": ["React","React Native", "JavaScript", "CSS", "SQL", "Node.js"],
         "status": "completed",
         "featured": true
     },
